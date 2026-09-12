@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blossom Interior & Decorator — Kalyan, Dombivli, Thane & Navi Mumbai</title>
+<meta name="description" content="Interior & exterior painting, waterproofing, false ceilings, wallpapers, flooring and custom furniture in Kalyan, Dombivli, Thane, Mulund, Ghatkopar and Navi Mumbai. Since 2019.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0;
+    --paper-2:#E4DCC9;
+    --ink:#24261F;
+    --ink-soft:#4A4B3F;
+    --brass:#A9862F;
+    --brass-deep:#8A6C22;
+    --moss:#45543C;
+    --moss-deep:#333F2C;
+    --line:#CFC5AA;
+    --white:#FBF9F4;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    color:var(--ink);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:2px solid var(--moss);outline-offset:3px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(239,234,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 28px;max-width:var(--max);margin:0 auto;
+  }
+  .brand{display:flex;flex-direction:column;line-height:1.1;}
+  .brand strong{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;}
+  .brand span{font-size:0.72rem;letter-spacing:0.04em;color:var(--ink-soft);}
+  .nav-links{display:flex;gap:28px;font-size:0.92rem;}
+  .nav-links a{border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color 0.2s ease;}
+  .nav-links a:hover{border-color:var(--brass);}
+  .nav-cta{display:flex;gap:10px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 20px;
+    border-radius:2px;
+    font-size:0.88rem;
+    font-weight:500;
+    border:1px solid var(--ink);
+    transition:background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+    cursor:pointer;
+  }
+  .btn-fill{background:var(--moss);color:var(--white);border-color:var(--moss);}
+  .btn-fill:hover{background:var(--moss-deep);border-color:var(--moss-deep);}
+  .btn-line{border-color:var(--ink);}
+  .btn-line:hover{background:var(--ink);color:var(--paper);}
+  .btn:active{transform:translateY(1px);}
+  @media(max-width:860px){ 
+    .nav-links{display:none;} 
+    .nav{flex-wrap:wrap;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:72px 0 60px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+  }
+  .eyebrow-line{
+    display:flex;align-items:center;gap:10px;
+    font-size:0.85rem;color:var(--ink-soft);margin-bottom:22px;
+  }
+  .eyebrow-line .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);}
+  .hero h1{
+    font-size:clamp(2.3rem,4.4vw,3.6rem);
+    line-height:1.06;
+  }
+  .hero h1 em{font-style:italic;color:var(--moss);font-weight:400;}
+  .hero p.lede{
+    margin-top:22px;max-width:46ch;
+    font-size:1.08rem;color:var(--ink-soft);
+  }
+  .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .hero-meta{
+    margin-top:38px;display:flex;gap:34px;flex-wrap:wrap;
+    border-top:1px solid var(--line);padding-top:22px;
+  }
+  .hero-meta div{font-size:0.85rem;color:var(--ink-soft);}
+  .hero-meta strong{display:block;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--ink);font-weight:600;}
+  .hero-photo{
+    position:relative;
+    border:1px solid var(--line);
+    border-radius:3px;
+    overflow:hidden;
+    aspect-ratio:4/5;
+    background:var(--paper-2);
+  }
+  .hero-photo-placeholder{
+    width:100%;height:100%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:0.9rem;color:var(--ink-soft);
+    text-align:center;
+    padding:20px;
+  }
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px;}
+    .hero-photo{aspect-ratio:16/9;}
+  }
+
+  /* ---------- Services Section ---------- */
+  .services{
+    padding:80px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .services-header{
+    max-width:600px;margin-bottom:60px;
+  }
+  .services-header h2{
+    font-size:clamp(1.8rem,3.5vw,2.8rem);
+    line-height:1.1;
+    margin-bottom:16px;
+  }
+  .services-header p{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:32px;
+  }
+  .service-card{
+    padding:28px;
+    border:1px solid var(--line);
+    border-radius:3px;
+    background:var(--white);
+    transition:all 0.3s ease;
+  }
+  .service-card:hover{
+    border-color:var(--brass);
+    box-shadow:0 8px 24px rgba(0,0,0,0.06);
+    transform:translateY(-4px);
+  }
+  .service-card-icon{
+    width:56px;height:56px;
+    border-radius:50%;
+    background:var(--paper-2);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.8rem;
+    margin-bottom:16px;
+  }
+  .service-card h3{
+    font-size:1.3rem;
+    margin-bottom:12px;
+  }
+  .service-card p{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+
+  /* ---------- Process Section ---------- */
+  .process{
+    padding:80px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .process-header{
+    max-width:600px;margin-bottom:60px;
+  }
+  .process-header h2{
+    font-size:clamp(1.8rem,3.5vw,2.8rem);
+    line-height:1.1;
+    margin-bottom:16px;
+  }
+  .process-header p{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+  .process-steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:32px;
+  }
+  .process-step{
+    position:relative;
+    padding:32px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:3px;
+  }
+  .process-step-number{
+    display:inline-flex;
+    align-items:center;justify-content:center;
+    width:48px;height:48px;
+    border-radius:50%;
+    background:var(--moss);
+    color:var(--white);
+    font-family:'Fraunces',serif;
+    font-size:1.4rem;
+    font-weight:600;
+    margin-bottom:16px;
+  }
+  .process-step h3{
+    font-size:1.2rem;
+    margin-bottom:12px;
+  }
+  .process-step p{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+
+  /* ---------- Contact Section ---------- */
+  .contact{
+    padding:80px 0;
+  }
+  .contact-header{
+    max-width:600px;margin-bottom:60px;
+  }
+  .contact-header h2{
+    font-size:clamp(1.8rem,3.5vw,2.8rem);
+    line-height:1.1;
+    margin-bottom:16px;
+  }
+  .contact-header p{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:start;
+  }
+  .contact-info{
+    display:flex;flex-direction:column;gap:32px;
+  }
+  .contact-item{
+    display:flex;gap:20px;
+  }
+  .contact-item-icon{
+    width:48px;height:48px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:var(--paper-2);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;
+  }
+  .contact-item-content h3{
+    font-size:1.1rem;
+    margin-bottom:6px;
+  }
+  .contact-item-content p{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .contact-item-content a{
+    color:var(--moss);
+    font-weight:500;
+    transition:color 0.2s ease;
+  }
+  .contact-item-content a:hover{
+    color:var(--moss-deep);
+  }
+  .contact-form{
+    display:flex;flex-direction:column;gap:18px;
+    background:var(--white);
+    padding:40px;
+    border:1px solid var(--line);
+    border-radius:3px;
+  }
+  .form-group{
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .form-group label{
+    font-size:0.9rem;
+    font-weight:500;
+    color:var(--ink);
+  }
+  .form-group input,
+  .form-group textarea{
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:2px;
+    font-family:inherit;
+    font-size:0.95rem;
+    color:var(--ink);
+    background:var(--paper);
+    transition:border-color 0.2s ease;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus{
+    outline:none;
+    border-color:var(--moss);
+  }
+  .form-group textarea{
+    resize:vertical;
+    min-height:120px;
+  }
+  .form-submit{
+    align-self:flex-start;
+  }
+  @media(max-width:900px){
+    .contact-grid{grid-template-columns:1fr;gap:40px;}
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--moss);
+    color:var(--white);
+    padding:48px 28px;
+    text-align:center;
+    border-top:1px solid var(--line);
+  }
+  footer .wrap{
+    display:flex;flex-direction:column;gap:20px;align-items:center;
+  }
+  .footer-brand{
+    font-family:'Fraunces',serif;
+    font-size:1.2rem;
+    font-weight:600;
+  }
+  .footer-links{
+    display:flex;gap:24px;font-size:0.9rem;flex-wrap:wrap;justify-content:center;
+  }
+  .footer-links a{
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:border-color 0.2s ease;
+  }
+  .footer-links a:hover{
+    border-color:var(--white);
+  }
+  .footer-copy{
+    font-size:0.85rem;
+    opacity:0.85;
+  }
+
+  /* ---------- Utility Classes ---------- */
+  .text-center{text-align:center;}
+  .mt-small{margin-top:16px;}
+  .mt-medium{margin-top:32px;}
+  .mt-large{margin-top:56px;}
+  .gap-small{gap:12px;}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <strong>Blossom Interior</strong>
+      <span>Since 2019</span>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a href="#areas">Areas Served</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:07208102029" class="btn btn-line">
+        <span>📞</span>
+        <span>Call</span>
+      </a>
+      <a href="https://wa.me/917208102029" target="_blank" class="btn btn-fill">
+        <span>💬</span>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow-line">
+          <span class="dot"></span>
+          <span>Transform Your Space</span>
+        </div>
+        <h1>Beautiful Interiors, <em>Perfectly Crafted</em></h1>
+        <p class="lede">Premium interior design and decoration services for residential and commercial spaces. From painting to custom furniture, we bring your vision to life with expert craftsmanship and attention to detail.</p>
+        <div class="hero-actions">
+          <a href="tel:07208102029" class="btn btn-fill">
+            <span>📞</span>
+            Call Now
+          </a>
+          <a href="https://wa.me/917208102029" target="_blank" class="btn btn-line">
+            <span>💬</span>
+            WhatsApp Us
+          </a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <strong>1000+</strong>
+            <span>Projects Completed</span>
+          </div>
+          <div>
+            <strong>5+</strong>
+            <span>Cities Served</span>
+          </div>
+          <div>
+            <strong>5★</strong>
+            <span>Customer Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-photo-placeholder">
+          <div>
+            <div style="font-size:3rem;margin-bottom:12px;">🏠</div>
+            Beautiful Interior Design
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive interior and exterior solutions tailored to your needs. Expert execution with premium materials and finishes.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-icon">🎨</div>
+        <h3>Interior Painting</h3>
+        <p>Premium wall paints with flawless finishes. Color consultation and expert application for residential and commercial spaces.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🖼️</div>
+        <h3>Exterior Painting</h3>
+        <p>Weather-resistant exterior paints protecting your building. Long-lasting colors that maintain beauty year-round.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">📄</div>
+        <h3>Wallpapers</h3>
+        <p>Designer wallpapers with professional installation. Transform any room with texture, pattern, and style.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🏠</div>
+        <h3>House Interior Design</h3>
+        <p>Complete interior design solutions from concept to completion. Customized spaces that reflect your lifestyle and aesthetics.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🍳</div>
+        <h3>Modular Kitchen</h3>
+        <p>Custom-designed modular kitchens with premium fixtures. Efficient, stylish, and perfectly tailored to your home.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">💧</div>
+        <h3>Waterproofing</h3>
+        <p>Advanced waterproofing solutions for terraces, bathrooms, and basements. Protect your property from moisture damage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">☁️</div>
+        <h3>POP Ceilings</h3>
+        <p>Decorative false ceilings with POP or gypsum. Create modern aesthetics with hidden wiring and lighting solutions.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🔷</div>
+        <h3>Vitrified Tiling</h3>
+        <p>Premium vitrified tiles for flooring and walls. Durable, stain-resistant, and available in endless designs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">✨</div>
+        <h3>Polish & Finishing</h3>
+        <p>Expert polishing for marble, tile, and wood surfaces. Restore shine and protect your floors with premium treatments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="process-header">
+      <h2>Our Process</h2>
+      <p>Simple, transparent, and customer-focused. We ensure quality at every step of your project.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step-number">1</div>
+        <h3>Consultation</h3>
+        <p>Free site visit and detailed consultation. We understand your vision, budget, and timeline.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-number">2</div>
+        <h3>Proposal</h3>
+        <p>Detailed quote with materials, timeline, and cost breakdown. Clear expectations before work begins.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-number">3</div>
+        <h3>Design</h3>
+        <p>Design finalization with your approval. Material selection and color consultation included.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-number">4</div>
+        <h3>Execution</h3>
+        <p>Professional installation by our skilled team. Regular updates and quality checks throughout.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-number">5</div>
+        <h3>Inspection</h3>
+        <p>Final walkthrough and quality inspection. We ensure everything meets our high standards.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-number">6</div>
+        <h3>Support</h3>
+        <p>Post-project support and maintenance guidance. We're here for you after the project is complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-header">
+      <h2>Get in Touch</h2>
+      <p>Ready to transform your space? Contact us today for a free consultation.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-content">
+            <h3>Direct Call</h3>
+            <p>
+              <a href="tel:07208102029">07208102029</a>
+            </p>
+            <p style="font-size:0.85rem;margin-top:4px;">Mon-Sat, 9AM-8PM</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">💬</div>
+          <div class="contact-item-content">
+            <h3>WhatsApp</h3>
+            <p>
+              <a href="https://wa.me/917208102029" target="_blank">+91 7208102029</a>
+            </p>
+            <p style="font-size:0.85rem;margin-top:4px;">Instant response • Quick quotes</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-content">
+            <h3>Service Areas</h3>
+            <p>Kalyan • Dombivli • Thane<br>Mulund • Ghatkopar • Navi Mumbai</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">⏰</div>
+          <div class="contact-item-content">
+            <h3>Hours</h3>
+            <p>Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: By Appointment</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service" style="padding:12px 14px;border:1px solid var(--line);border-radius:2px;font-family:inherit;font-size:0.95rem;color:var(--ink);background:var(--paper);" required>
+            <option value="">Select a service</option>
+            <option value="painting">Interior/Exterior Painting</option>
+            <option value="wallpaper">Wallpapers</option>
+            <option value="interior">House Interior Design</option>
+            <option value="kitchen">Modular Kitchen</option>
+            <option value="waterproofing">Waterproofing</option>
+            <option value="pop">POP Ceilings</option>
+            <option value="tiling">Vitrified Tiling</option>
+            <option value="polish">Polish & Finishing</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-fill form-submit">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Areas Served Section -->
+<section id="areas" style="padding:60px 0;border-bottom:1px solid var(--line);background:var(--white);">
+  <div class="wrap text-center">
+    <h2 style="font-size:2rem;margin-bottom:32px;">Serving Multiple Areas</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));gap:24px;max-width:900px;margin:0 auto;">
+      <div style="padding:20px;border:1px solid var(--line);border-radius:3px;">
+        <div style="font-size:1.4rem;margin-bottom:8px;">📍</div>
+        <strong>Kalyan</strong>
+      </div>
+      <div style="padding:20px;border:1px solid var(--line);border-radius:3px;">
+        <div style="font-size:1.4rem;margin-bottom:8px;">📍</div>
+        <strong>Dombivli</strong>
+      </div>
+      <div style="padding:20px;border:1px solid var(--line);border-radius:3px;">
+        <div style="font-size:1.4rem;margin-bottom:8px;">📍</div>
+        <strong>Thane</strong>
+      </div>
+      <div style="padding:20px;border:1px solid var(--line);border-radius:3px;">
+        <div style="font-size:1.4rem;margin-bottom:8px;">📍</div>
+        <strong>Mulund</strong>
+      </div>
+      <div style="padding:20px;border:1px solid var(--line);border-radius:3px;">
+        <div style="font-size:1.4rem;margin-bottom:8px;">📍</div>
+        <strong>Ghatkopar</strong>
+      </div>
+      <div style="padding:20px;border:1px solid var(--line);border-radius:3px;">
+        <div style="font-size:1.4rem;margin-bottom:8px;">📍</div>
+        <strong>Navi Mumbai</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">Blossom Interior & Decorator</div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/917208102029" target="_blank">WhatsApp</a>
+      <a href="tel:07208102029">Call</a>
+    </div>
+    <div class="footer-copy">© 2019-2026 Blossom Interior & Decorator. All rights reserved. | Serving Kalyan, Dombivli, Thane & Navi Mumbai</div>
+  </div>
+</footer>
+
+<script>
+  // Form handling
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+    
+    const whatsappMessage = `Hi Blossom Interior Team,%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AService: ${service}%0AMessage: ${message}`;
+    
+    window.open(`https://wa.me/917208102029?text=${whatsappMessage}`, '_blank');
+  });
+
+  // Smooth scroll for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
