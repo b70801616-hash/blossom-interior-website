@@ -1,0 +1,9 @@
+# Robots.txt for Blossom Interior & Decorator
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://blossominterior.com/sitemap.xml
