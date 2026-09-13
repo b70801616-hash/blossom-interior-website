@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Interior & Decorator | Premium Interior & Civil Painting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-black: #0D0D0D;
+            --card-black: #1A1A1A;
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA7C11;
+            --text-white: #F5F5F5;
+            --text-gray: #B0B0B0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(13,13,13,0.95) 100%), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .logo-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero-desc {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--gold-dark), var(--gold-primary));
+            color: #000;
+            padding: 14px 32px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2deg);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold-primary);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--gold-primary);
+            margin: 10px auto 0;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: var(--card-black);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold-primary);
+        }
+
+        .service-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Lead Form Section */
+        .form-container {
+            background: var(--card-black);
+            border: 1px solid var(--gold-primary);
+            padding: 35px 25px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #0D0D0D;
+            border: 1px solid #333;
+            color: var(--text-white);
+            border-radius: 6px;
+            outline: none;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            border-color: var(--gold-primary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(45deg, var(--gold-dark), var(--gold-primary));
+            color: #000;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #050505;
+            border-top: 1px solid #222;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+
+        footer strong {
+            color: var(--gold-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="logo-title">Blossom Interior & Decorator</h1>
+        <p class="subtitle">Luxury Interiors & Master Civil Painting Solutions</p>
+        <p class="hero-desc">Transforming residential and commercial spaces across Kalyan, Dombivli, Thane & Mumbai with premium finishings.</p>
+        <a href="#quote-form" class="cta-btn">Get Free Estimation</a>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Our Expertise</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Civil Painting & Polishing</h3>
+                <p>High-end interior/exterior painting, custom wall textures, wood polishing, and galaxy glow ceilings.</p>
+            </div>
+            <div class="service-card">
+                <h3>POP & False Ceilings</h3>
+                <p>Architectural POP design, gypsum ceilings, and customized decorative lighting layouts.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tiling & Waterproofing</h3>
+                <p>Precision floor/wall tile installation and advanced long-lasting leakage waterproofing solutions.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="quote-form">Request a Consultation</h2>
+        <div class="form-container">
+            <form action="https://formspree.io/f/xbjnopqr" method="POST">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" name="phone" placeholder="Enter your 10-digit number" required>
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select name="service">
+                        <option value="Painting">Civil Painting & Polishing</option>
+                        <option value="False Ceiling">POP / False Ceiling</option>
+                        <option value="Tiling Waterproofing">Tiling & Waterproofing</option>
+                        <option value="Full Renovation">Complete Interior Renovation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Project Details / Location</label>
+                    <textarea name="message" rows="4" placeholder="Mention area (e.g. Kalyan East, 2BHK, 600 sq ft office)"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Requirement</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Blossom Interior & Decorator</strong> | Kalyan East, Maharashtra</p>
+        <p>© 2026 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
 
