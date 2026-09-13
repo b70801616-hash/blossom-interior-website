@@ -1,209 +1,307 @@
-💬
-☎
-Blossom Interior & Decorator logo
-Blossom
-Interior & Decorator
-Book a Consult
-Complete Interior Solutions · Thane · Kalyan · Dombivali
-Blossom
-Designing Dreams. Creating Spaces. Improving Lives.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blossom Interior & Decorator - Civil Painting & Interior Solutions</title>
+  <style>
+    :root {
+      --primary: #1a252f;
+      --accent: #d4af37;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --card-bg: #ffffff;
+    }
 
-A full-service interior design and painting studio for homes and commercial spaces that are planned end to end — from first sketch to the last coat of paint — with quality beyond expectation at every stage.
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-Book a Consult
-Explore Services
-Scroll
-★★★★★
-5.00 Google Rating
-300+
-Happy Customers
-27+
-Services Offered
-24×7
-Open All Days
-100%
-In-House Execution
-What We Do
-Four disciplines, one studio
-Every project draws on the same team from concept through handover — no handoffs, no guesswork, one point of accountability.
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
 
-01 
-Interior Design
-Space planning, material palettes and lighting concepts built around how each room is actually lived in.
+    header {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
 
-02 
-Turnkey Projects
-One agreement, one timeline. Civil work, electrical, false ceiling and finishing managed under a single roof.
+    header h1 {
+      color: var(--accent);
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
 
-03 
-Modular Furniture
-Custom-built wardrobes, kitchens and storage, fabricated to measured drawings and finished on site.
+    header p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
 
-04 
-Decor & Styling
-The final layer — soft furnishings, art, accessories and styling that make a finished space feel complete.
+    nav {
+      background: #111111;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-Why Blossom
-Built for trust, not just for looks
-In-House Execution
-No subcontracting the work out — our own carpenters, painters and site team handle your project start to finish.
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
 
-On-Time Delivery
-A fixed project timeline agreed upfront, with regular site updates so there are no surprises along the way.
+    nav a:hover {
+      color: var(--accent);
+    }
 
-Transparent Pricing
-A detailed, itemised quote before work begins — what you approve is what you're billed, with no hidden add-ons.
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2.5rem 1rem;
+    }
 
-Workmanship Warranty
-Every turnkey project is backed by a workmanship warranty, with support after handover if anything needs attention.
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
 
-The Full Range
-Every service, under one studio
-27+ services across interior work, renovation and specialist painting — for homes, offices and commercial spaces across Thane, Kalyan, Dombivali and nearby areas.
+    .section-title {
+      font-size: 2rem;
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-Interior & Renovation
-Modular kitchen design & installation
-Living room & bedroom interior design
-Full home interior decoration
-Office & commercial interior design
-False ceiling & POP / gypsum work
-Custom furniture making & woodwork
-Civil & home renovation work
-Customized 3D wallpaper services
-Wall panelling, artificial grass & vinyl flooring
-Specialist Painting
-Interior & exterior house painting
-Texture painting & wall finishes
-Door, wood & furniture painting
-Wood & metal polish coating (melamine / PU, anti-rust)
-Roof painting — metal, tin shed & industrial
-Spray painting — PU, epoxy, Duco, industrial coatings
-Waterproofing & anti-damp (seelan) treatment
-Post-painting deep cleaning
-27+
-Services Offered
-300+
-Happy Customers
-5.00
-Rating · 11 Reviews
-The Studio
-Interiors planned like architecture, finished like craft
-Blossom Interior & Decorator was built on a simple premise: a home should be designed with the same discipline as it is built. We plan every space in full before a single panel is cut, so what you approve on paper is exactly what you receive.
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-From a single room refresh to a full turnkey fit-out, our team stays with the project from first measurement to final styling — one studio, one standard, start to finish.
+    .gallery-item {
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-Quality Beyond Expectation
-How A Project Unfolds
-From first visit to final walkthrough
-Consult
-Site visit & brief
-We walk the space with you, understand how you live in it, and note the constraints that will shape the plan.
+    .gallery-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
 
-Design
-Layout & material selection
-Detailed drawings, 3D views and a defined material and finish palette, reviewed with you before anything is fixed.
+    .gallery-veil {
+      padding: 1rem;
+      background: #fff;
+      text-align: center;
+      font-weight: 600;
+      color: var(--primary);
+    }
 
-Execute
-Turnkey delivery
-Civil, modular and finishing work managed on site by our team, against the approved drawings and timeline.
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-Style
-Decor & handover
-Furnishing, accessories and final styling, followed by a walkthrough before the keys are handed back to you.
+    .video-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
 
-Spaces We Shape
-Every room, considered
-A preview of the categories we design for — share your own space and we'll bring the same approach to it.
+    .iframe-wrapper {
+      position: relative;
+      padding-bottom: 125%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
 
-01
-Living Rooms
-02
-Bedrooms
-03
-Kitchens
-Recent Work
-Project gallery
-A look at completed rooms and finishes. Add your own project photos any time — see the guide at the top of this file.
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-Add gallery-1.jpg
-Living Room & Pooja Unit
-Add gallery-2.jpg
-Modular Kitchen
-Add gallery-3.jpg
-Bedroom — In Progress
-Add gallery-4.jpg
-Sliding Wardrobe
-Add gallery-5.jpg
-TV Unit & Wall Panelling
-Add gallery-6.jpg
-Pooja Unit Detail
-Add gallery-7.jpg
-Kitchen Cabinet Detail
-Add gallery-8.jpg
-Walk-in Wardrobe
-Commercial Fit-Out
-A recent salon & spa project
-Salon styling area
-Styling Area
-Salon reception area
-Reception Area
-Spa and hair wash bay
-Spa & Hair Wash Bay
-Pedicure lounge
-Pedicure Lounge
-Walkthroughs
-See a project come together
-A short walkthrough of a recent turnkey project, start to finish.
+    .qr-card {
+      background: #ffffff;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 3rem auto 0 auto;
+      border: 1px solid #eaeaea;
+    }
 
-►
-Video coming soon — add videos/showreel.mp4
+    .qr-card img {
+      max-width: 240px;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 1px solid #ddd;
+      padding: 5px;
+      background: #fff;
+    }
 
-"Designing dreams, creating spaces, improving lives."
-— The Blossom studio ethos
-Loved Our Work?
-Leave us a Google review
-It takes 30 seconds and helps other families in Thane, Kalyan and Dombivali find us. Scan the code or tap below on your phone.
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 0.9rem 1.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
 
-Write a Review
-Scan to review Blossom Interior & Decorator on Google
-Scan to review us on Google
-Common Questions
-Before you get in touch
-How long does a full home interior take?
-Most 2–3 BHK turnkey projects take 45–75 days from design approval to handover, depending on scope. We share a fixed timeline before work starts.
+    .btn:hover {
+      background: #b89628;
+    }
 
-Do you handle both design and execution?
-Which areas do you serve?
-Is the quote fixed, or can costs change later?
-Do you offer a warranty after handover?
-Get In Touch
-Start your project
-Tell us about your space and timeline. We'll arrange a site visit and walk you through how Blossom can take it from plan to finished room — serving Thane, Kalyan, Dombivali and nearby areas.
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
 
-Visit
-B-Wing, Flat No. 301, Sai Shradlha Park, Adawali Dhokli, Near Mountain Green, Haji Malang Road, Kalyan East – 421306
-Call
-7208102029
-Email
-blossominteriord@gmail.com
-Email
-b70801616@gmail.com
-Blossom Interior & Decorator studio signboard
-Visit the studio
-B-Wing, Flat No. 301, Sai Shradlha Park, Adawali Dhokli, Near Mountain Green, Haji Malang Road, Kalyan East – 421306
+  <header>
+    <h1>Blossom Interior & Decorator</h1>
+    <p>Civil Painting, POP False Ceiling, Modular Kitchen & Complete Interior Solutions</p>
+  </header>
 
-Full name
-Your name
-Phone
-Contact number
-About your space
-Flat size, location, what you'd like designed…
+  <nav>
+    <a href="#gallery">Photo Gallery</a>
+    <a href="#videos">Site Videos</a>
+    <a href="#review">Google Review</a>
+  </nav>
 
-Request a Consult
-Blossom logo
-Blossom Interior & Decorator
-Services
-Studio
-Spaces
-7208102029
-Kalyan East, Maharashtra — Serving Thane, Kalyan & Dombivali — Complete Interior & Painting Solutions
+  <div class="container">
+
+    <section id="gallery">
+      <div class="section-header">
+        <h2 class="section-title">Our Recent Projects</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-1.jpg" onerror="this.src='1000246161.jpg'" alt="Sliding Wardrobe">
+          <div class="gallery-veil">Modern Wooden Sliding Wardrobe</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-2.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6910.png'" alt="Modular Kitchen">
+          <div class="gallery-veil">High-Gloss Modular Kitchen</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-3.jpg" onerror="this.src='1000243929.jpg'" alt="POP Ceiling">
+          <div class="gallery-veil">Living Room POP Cove Lighting</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-4.jpg" onerror="this.src='1000252793.jpg'" alt="Arch Wall Panel">
+          <div class="gallery-veil">CNC Pattern Textured Arch Wall</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-5.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6790.jpg'" alt="Reception Arch">
+          <div class="gallery-veil">Office Reception Arch Wall</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-6.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6907.png'" alt="Commercial Gypsum Ceiling">
+          <div class="gallery-veil">Commercial Gypsum Ceiling</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" style="margin-top: 4rem;">
+      <div class="section-header">
+        <h2 class="section-title">Site Execution & Video Tours</h2>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DapJ-u6sKGR/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DdLFmYVMr6S/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DdBbRDgx9mn/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DclYUyGshMY/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DcknfLAs_0E/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DcYy2NMsw2H/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DcUOqWaRrvf/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/Dat91rUMzKk/embed" scrolling="no" allowtransparency="true">️</iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="review">
+      <div class="qr-card">
+        <h2 class="section-title" style="font-size: 1.5rem;">Rate Us On Google</h2>
+        <p style="margin-top: 10px;">Aapka feedback hamare liye bohot keemti hai! Niche diye QR Code ko scan karein ya button par click karke rating dein.</p>
+        <img src="images/gallery/qr-code.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6753.jpg'" alt="Google Review QR Code">
+        <br>
+        <a href="https://g.page/r/your-google-review-link" target="_blank" class="btn">Scan / Leave a Review</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Blossom Interior & Decorator. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
