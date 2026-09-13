@@ -1,1109 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blossom Interior &amp; Decorator — Complete Interior Solutions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blossom Interior & Decorator - Civil Painting & Interior Solutions</title>
+  <style>
+    :root {
+      --primary: #1a252f;
+      --accent: #d4af37;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --card-bg: #ffffff;
+    }
 
-<!-- ============================================================
-     EASY-EDIT GUIDE (for the site owner)
-     - TEXT: every heading/paragraph is plain text in the HTML below —
-       find the words you want to change and edit them directly.
-     - COLORS: all colors are defined once at the top of <style>,
-       inside :root{ ... } — change a hex value there and it updates
-       everywhere on the site automatically.
-     - PHOTOS: put your own images in the /images/gallery/ folder,
-       named gallery-1.jpg through gallery-8.jpg (any photo size
-       works). Until a file is added, that slot shows a neat gold
-       placeholder automatically — no broken images.
-     - VIDEO: put one video file at /videos/showreel.mp4 and a cover
-       image at /images/video-poster.jpg to activate the video
-       section — it also degrades gracefully if left empty.
-     - PHONE/EMAIL: search this file for 7208102029 or
-       blossominteriord@gmail.com and replace with your own.
-     ============================================================ -->
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg-deep:#0b0906;
-    --bg:#151109;
-    --bg-panel:#1c160d;
-    --gold-1:#c9a24e;
-    --gold-2:#f0dba3;
-    --gold-dim:#8a6d34;
-    --ink:#f2e9d8;
-    --stone:#a89a80;
-    --hairline:#3a3120;
-    --hairline-soft:#241d12;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Work Sans', sans-serif;
-    font-weight:300;
-    overflow-x:hidden;
-  }
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
-  }
-  h1,h2,h3,.display{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    letter-spacing:0.01em;
-  }
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
-  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
-  .eyebrow{
-    font-family:'Work Sans', sans-serif;
-    text-transform:uppercase;
-    letter-spacing:0.28em;
-    font-size:11.5px;
-    color:var(--gold-1);
-    font-weight:500;
-  }
-  ::selection{background:var(--gold-1); color:var(--bg-deep);}
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
 
-  /* ---------- petal mark (from the brand logo) ---------- */
-  .petal-mark{ display:block; }
-  .petal-mark circle{ fill:none; stroke-width:1.1; }
+    header {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
 
-  /* ---------- nav ---------- */
-  header{
-    position:fixed; top:0; left:0; right:0; z-index:50;
-    background:linear-gradient(to bottom, rgba(11,9,6,0.92), rgba(11,9,6,0));
-    padding:22px 0 40px;
-    transition:background .4s ease, padding .4s ease;
-  }
-  header.scrolled{
-    background:rgba(11,9,6,0.88);
-    backdrop-filter:blur(10px);
-    padding:14px 0;
-    border-bottom:1px solid var(--hairline-soft);
-  }
-  nav{display:flex; align-items:center; justify-content:space-between;}
-  .brand{display:flex; align-items:center; gap:12px;}
-  .brand img{width:38px; height:38px; border-radius:50%;}
-  .brand-name{font-family:'Fraunces', serif; font-size:19px; letter-spacing:0.02em; color:var(--ink);}
-  .brand-name em{
-    font-style:italic; font-weight:300; color:var(--stone); font-size:11px;
-    display:block; letter-spacing:0.15em; text-transform:uppercase; margin-top:1px;
-  }
-  .nav-links{display:flex; gap:38px; font-size:13.5px; letter-spacing:0.05em;}
-  .nav-links a{color:var(--stone); transition:color .3s ease; position:relative; padding-bottom:4px;}
-  .nav-links a:hover, .nav-links a:focus-visible{color:var(--gold-2);}
-  .nav-links a::after{
-    content:''; position:absolute; left:0; bottom:0; height:1px; width:0;
-    background:var(--gold-1); transition:width .3s ease;
-  }
-  .nav-links a:hover::after{width:100%;}
-  .nav-cta{
-    border:1px solid var(--gold-dim); padding:9px 20px; font-size:12.5px;
-    letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-2);
-    transition:all .3s ease;
-  }
-  .nav-cta:hover{background:var(--gold-1); color:var(--bg-deep); border-color:var(--gold-1);}
-  .menu-btn{display:none;}
+    header h1 {
+      color: var(--accent);
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
 
-  /* ---------- hero ---------- */
-  .hero{
-    position:relative;
-    min-height:100vh;
-    display:flex; align-items:center; justify-content:center;
-    text-align:center;
-    padding:120px 32px 80px;
-    background:
-      radial-gradient(ellipse at 50% 20%, rgba(201,162,78,0.10), transparent 55%),
-      var(--bg-deep);
-    overflow:hidden;
-  }
-  .hero-bloom{
-    position:absolute; top:50%; left:50%;
-    width:min(140vw,1400px); aspect-ratio:1;
-    transform:translate(-50%,-50%);
-    opacity:0.55;
-    animation:bloom-rotate 140s linear infinite;
-    pointer-events:none;
-  }
-  @keyframes bloom-rotate{ to{ transform:translate(-50%,-50%) rotate(360deg);} }
-  .hero-inner{position:relative; z-index:2; max-width:760px;}
-  .hero .eyebrow{margin-bottom:22px; display:inline-block;}
-  .hero h1{
-    font-size:clamp(52px,9vw,104px);
-    line-height:0.95;
-    background:linear-gradient(180deg, var(--gold-2) 0%, var(--gold-1) 55%, #a9843f 100%);
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-    margin-bottom:6px;
-  }
-  .hero-sub{
-    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
-    font-size:clamp(17px,2.4vw,23px); color:var(--stone); letter-spacing:0.02em;
-    margin-bottom:34px;
-  }
-  .hero-desc{
-    max-width:520px; margin:0 auto 44px; color:var(--stone);
-    font-size:15.5px; line-height:1.8; font-weight:300;
-  }
-  .hero-actions{display:flex; gap:18px; justify-content:center; flex-wrap:wrap;}
-  .btn-primary{
-    background:linear-gradient(135deg, var(--gold-2), var(--gold-1));
-    color:var(--bg-deep); padding:15px 34px; font-size:13px; font-weight:500;
-    letter-spacing:0.08em; text-transform:uppercase; transition:transform .3s ease, box-shadow .3s ease;
-    box-shadow:0 8px 30px -10px rgba(201,162,78,0.5);
-  }
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 34px -8px rgba(201,162,78,0.65);}
-  .btn-ghost{
-    border:1px solid var(--hairline); color:var(--ink); padding:15px 34px;
-    font-size:13px; letter-spacing:0.08em; text-transform:uppercase; transition:all .3s ease;
-  }
-  .btn-ghost:hover{border-color:var(--gold-1); color:var(--gold-2);}
+    header p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
 
-  .scroll-cue{
-    position:absolute; bottom:36px; left:50%; transform:translateX(-50%);
-    display:flex; flex-direction:column; align-items:center; gap:10px;
-    color:var(--stone); font-size:10.5px; letter-spacing:0.25em; text-transform:uppercase;
-    z-index:2;
-  }
-  .scroll-cue .line{width:1px; height:36px; background:linear-gradient(var(--gold-1), transparent); animation:cue-pulse 2.4s ease-in-out infinite;}
-  @keyframes cue-pulse{0%,100%{opacity:.3;} 50%{opacity:1;}}
+    nav {
+      background: #111111;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-  .hero-photo{
-    position:absolute; inset:0; background-size:cover; background-position:center;
-    filter:saturate(0.9) brightness(0.55);
-  }
-  .hero-photo-veil{
-    position:absolute; inset:0;
-    background:
-      linear-gradient(180deg, rgba(11,9,6,0.55) 0%, rgba(11,9,6,0.75) 55%, var(--bg-deep) 96%),
-      radial-gradient(ellipse at 50% 25%, rgba(201,162,78,0.14), transparent 60%);
-  }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
 
-  /* ---------- trust bar ---------- */
-  .trust-bar{background:var(--bg-panel); border-bottom:1px solid var(--hairline-soft); position:relative; z-index:3;}
-  .trust-bar-inner{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:0;
-    padding:28px 0;
-  }
-  .trust-item{
-    display:flex; flex-direction:column; align-items:center; gap:6px;
-    padding:0 42px; border-right:1px solid var(--hairline-soft); text-align:center;
-  }
-  .trust-item:last-child{border-right:none;}
-  .trust-item i{font-style:normal; color:var(--gold-1); font-size:13px; letter-spacing:2px;}
-  .trust-item strong{font-family:'Fraunces', serif; font-size:24px; color:var(--gold-2); font-weight:500;}
-  .trust-item span{font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone);}
+    nav a:hover {
+      color: var(--accent);
+    }
 
-  /* ---------- why us ---------- */
-  .why-us{background:var(--bg-deep);}
-  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
-  .why-card{
-    padding:36px 28px; border:1px solid var(--hairline); background:var(--bg-panel);
-    transition:transform .35s ease, border-color .35s ease;
-  }
-  .why-card:hover{transform:translateY(-6px); border-color:var(--gold-1);}
-  .why-card svg{width:38px; height:38px; color:var(--gold-1); margin-bottom:22px;}
-  .why-card h3{font-size:18px; color:var(--ink); margin-bottom:12px; font-weight:500; font-family:'Fraunces', serif;}
-  .why-card p{font-size:13.5px; color:var(--stone); line-height:1.75; font-weight:300;}
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2.5rem 1rem;
+    }
 
-  /* ---------- FAQ ---------- */
-  .faq{background:var(--bg-panel); border-top:1px solid var(--hairline-soft);}
-  .faq-list{max-width:760px;}
-  .faq-item{border-bottom:1px solid var(--hairline-soft);}
-  .faq-item summary{
-    list-style:none; cursor:pointer; padding:26px 0; display:flex; align-items:center;
-    justify-content:space-between; gap:20px; font-size:16.5px; color:var(--ink);
-    font-family:'Fraunces', serif; font-weight:500;
-  }
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary::after{content:'+'; color:var(--gold-1); font-size:24px; font-family:'Work Sans',sans-serif; flex-shrink:0; transition:transform .3s ease;}
-  .faq-item[open] summary::after{content:'\2212';}
-  .faq-item p{color:var(--stone); font-size:14.5px; line-height:1.8; padding-bottom:26px; max-width:640px; font-weight:300;}
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
 
-  /* ---------- floating CTAs ---------- */
-  .float-ctas{position:fixed; right:22px; bottom:22px; z-index:60; display:flex; flex-direction:column; gap:12px;}
-  .float-btn{
-    width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-size:24px; box-shadow:0 8px 24px -6px rgba(0,0,0,0.5); transition:transform .3s ease;
-  }
-  .float-btn:hover{transform:scale(1.08);}
-  .float-btn.call{background:linear-gradient(135deg, var(--gold-2), var(--gold-1)); color:var(--bg-deep);}
-  .float-btn.wa{background:#25D366; color:#0b1b16;}
+    .section-title {
+      font-size: 2rem;
+      color: var(--primary);
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-  /* ---------- why us / faq responsive ---------- */
-  @media (max-width:920px){
-    .why-grid{grid-template-columns:repeat(2,1fr);}
-    .trust-item{padding:0 20px 14px; border-right:none; border-bottom:1px solid var(--hairline-soft); flex:1 1 40%;}
-  }
-  @media (max-width:560px){
-    .why-grid{grid-template-columns:1fr;}
-  }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-  /* ---------- section shell ---------- */
-  section{padding:130px 0;}
-  .section-head{max-width:640px; margin-bottom:70px;}
-  .section-head .eyebrow{margin-bottom:16px; display:block;}
-  .section-head h2{font-size:clamp(32px,4.2vw,48px); color:var(--ink); line-height:1.15;}
-  .section-head p{color:var(--stone); margin-top:18px; font-size:15.5px; line-height:1.8; max-width:520px;}
-  .divider{
-    display:flex; align-items:center; justify-content:center; gap:18px;
-    margin:0 auto; width:fit-content;
-  }
-  .divider .stem{width:60px; height:1px; background:var(--hairline);}
+    .gallery-item {
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-  /* ---------- services ---------- */
-  .services{background:var(--bg);}
-  .service-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-    background:var(--hairline-soft); border:1px solid var(--hairline-soft);
-  }
-  .service-card{
-    background:var(--bg); padding:44px 30px; position:relative; overflow:hidden;
-    transition:background .4s ease;
-  }
-  .service-card:hover{background:var(--bg-panel);}
-  .service-num{font-family:'Fraunces', serif; font-size:12px; color:var(--gold-dim); letter-spacing:0.15em;}
-  .service-icon{width:42px; height:42px; margin:26px 0 22px; color:var(--gold-1);}
-  .service-card h3{font-size:19px; color:var(--ink); margin-bottom:12px; font-weight:500;}
-  .service-card p{font-size:13.8px; color:var(--stone); line-height:1.75; font-weight:300;}
+    .gallery-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
 
-  /* ---------- full service list ---------- */
-  .all-services{background:var(--bg-panel); border-top:1px solid var(--hairline-soft); border-bottom:1px solid var(--hairline-soft);}
-  .services-columns{display:grid; grid-template-columns:1fr 1fr; gap:70px;}
-  .col-head{
-    font-size:15px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-2);
-    font-family:'Work Sans', sans-serif; font-weight:500; padding-bottom:16px;
-    border-bottom:1px solid var(--hairline);
-  }
-  .service-list{list-style:none; margin-top:6px;}
-  .service-list li{
-    position:relative; padding:14px 0 14px 24px; border-bottom:1px solid var(--hairline-soft);
-    font-size:14.5px; color:var(--stone); font-weight:300; line-height:1.6;
-  }
-  .service-list li::before{
-    content:''; position:absolute; left:0; top:22px; width:6px; height:1px; background:var(--gold-1);
-  }
+    .gallery-veil {
+      padding: 1rem;
+      background: #fff;
+      text-align: center;
+      font-weight: 600;
+      color: var(--primary);
+    }
 
-  /* ---------- stats ---------- */
-  .stats{background:var(--bg-deep); padding:80px 0;}
-  .stats-row{display:flex; justify-content:center; gap:0; text-align:center; flex-wrap:wrap;}
-  .stat{padding:0 60px; border-right:1px solid var(--hairline-soft);}
-  .stat:last-child{border-right:none;}
-  .stat-num{
-    display:block; font-family:'Fraunces', serif; font-size:clamp(38px,5vw,56px);
-    background:linear-gradient(180deg, var(--gold-2), var(--gold-1));
-    -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1;
-  }
-  .stat-label{
-    display:block; margin-top:12px; font-size:11.5px; letter-spacing:0.14em;
-    text-transform:uppercase; color:var(--stone);
-  }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-  /* ---------- gallery (with graceful placeholder fallback) ---------- */
-  .gallery{background:var(--bg);}
-  .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
-  .gallery-grid > a:nth-child(3n+1){grid-row:span 2;}
-  .gallery-item{
-    position:relative; overflow:hidden; border:1px solid var(--hairline);
-    aspect-ratio:1/1; display:block; background:var(--bg-panel);
-  }
-  .gallery-grid > a:nth-child(3n+1) .gallery-item{aspect-ratio:1/2.08;}
-  .gallery-item img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s ease;}
-  .gallery-item:hover img{transform:scale(1.06);}
-  .gallery-placeholder{
-    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:10px; color:var(--gold-dim); background:
-      repeating-linear-gradient(135deg, var(--bg-panel) 0px, var(--bg-panel) 18px, var(--hairline-soft) 18px, var(--hairline-soft) 19px);
-  }
-  .gallery-placeholder svg{width:30px; height:30px; opacity:.8;}
-  .gallery-placeholder span{font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone);}
-  .gallery-veil{
-    position:absolute; inset:0; opacity:0; transition:opacity .4s ease;
-    background:linear-gradient(to top, rgba(11,9,6,.85), transparent 55%);
-    display:flex; align-items:flex-end; padding:16px;
-  }
-  .gallery-item:hover .gallery-veil{opacity:1;}
-  .gallery-veil span{font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-2);}
+    .video-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
 
-  /* ---------- video showcase ---------- */
-  .video-section{background:var(--bg-panel);}
-  .video-frame{
-    position:relative; border:1px solid var(--hairline); aspect-ratio:16/8; overflow:hidden;
-    background:var(--bg-deep);
-  }
-  .video-frame video{width:100%; height:100%; object-fit:cover; display:block;}
-  .video-placeholder{
-    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;
-    background:radial-gradient(ellipse at 50% 40%, rgba(201,162,78,0.08), transparent 60%);
-  }
-  .play-ring{
-    width:74px; height:74px; border-radius:50%; border:1px solid var(--gold-1);
-    display:flex; align-items:center; justify-content:center; color:var(--gold-2); font-size:20px;
-  }
-  .video-placeholder p{font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone);}
+    .iframe-wrapper {
+      position: relative;
+      padding-bottom: 125%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
 
-  /* ---------- cursor glow (desktop, high-class ambient touch) ---------- */
-  .cursor-glow{
-    position:fixed; width:420px; height:420px; border-radius:50%; pointer-events:none; z-index:1;
-    background:radial-gradient(circle, rgba(201,162,78,0.06), transparent 70%);
-    transform:translate(-50%,-50%); transition:opacity .4s ease; opacity:0;
-  }
-  @media (hover:hover){ .cursor-glow{opacity:1;} }
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-  /* ---------- philosophy / about ---------- */
-  .about{background:var(--bg-deep); position:relative;}
-  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;}
-  .about-mark{position:relative; display:flex; align-items:center; justify-content:center;}
-  .about-mark svg{width:100%; max-width:360px;}
-  .about-copy .eyebrow{display:block; margin-bottom:18px;}
-  .about-copy h2{font-size:clamp(30px,3.6vw,42px); margin-bottom:26px; line-height:1.2;}
-  .about-copy p{color:var(--stone); font-size:15.5px; line-height:1.85; margin-bottom:18px; font-weight:300;}
-  .quality-badge{
-    display:inline-flex; align-items:center; gap:12px; margin-top:28px;
-    border:1px solid var(--hairline); padding:14px 22px;
-  }
-  .quality-badge .dot{width:7px; height:7px; border-radius:50%; background:var(--gold-1);}
-  .quality-badge span{font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-2);}
+    .qr-card {
+      background: #ffffff;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 3rem auto 0 auto;
+      border: 1px solid #eaeaea;
+    }
 
-  /* ---------- approach / process ---------- */
-  .approach{background:var(--bg);}
-  .approach-list{border-top:1px solid var(--hairline-soft);}
-  .approach-row{
-    display:grid; grid-template-columns:120px 1fr 1fr; gap:40px; align-items:baseline;
-    padding:34px 0; border-bottom:1px solid var(--hairline-soft);
-  }
-  .approach-row .step-label{font-family:'Fraunces', serif; font-style:italic; color:var(--gold-1); font-size:16px;}
-  .approach-row h3{font-size:20px; color:var(--ink); font-weight:500;}
-  .approach-row p{font-size:14px; color:var(--stone); line-height:1.75; font-weight:300;}
+    .qr-card img {
+      max-width: 240px;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 1px solid #ddd;
+      padding: 5px;
+      background: #fff;
+    }
 
-  /* ---------- gallery / spaces (illustrative, css-drawn) ---------- */
-  .spaces{background:var(--bg-panel);}
-  .space-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
-  .space-card{
-    aspect-ratio:4/5; position:relative; overflow:hidden; border:1px solid var(--hairline);
-    display:flex; align-items:flex-end; padding:26px;
-  }
-  .space-card .room{
-    position:absolute; inset:0; opacity:0.9;
-  }
-  .space-card .veil{
-    position:absolute; inset:0;
-    background:linear-gradient(to top, rgba(11,9,6,0.88) 10%, rgba(11,9,6,0.15) 60%, rgba(11,9,6,0.05));
-  }
-  .space-card .label{position:relative; z-index:2;}
-  .space-card .label .eyebrow{margin-bottom:6px; display:block;}
-  .space-card .label h3{font-size:21px; color:var(--ink);}
-  .space-card svg{width:100%; height:100%;}
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 0.9rem 1.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
 
-  /* ---------- testimonial-ish quote strip ---------- */
-  .quote-strip{background:var(--bg-deep); padding:110px 0; text-align:center;}
-  .quote-strip blockquote{
-    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
-    font-size:clamp(24px,3.4vw,38px); line-height:1.45; max-width:820px; margin:0 auto;
-    color:var(--gold-2);
-  }
-  .quote-strip cite{
-    display:block; margin-top:26px; font-style:normal; font-size:12px;
-    letter-spacing:0.2em; text-transform:uppercase; color:var(--stone);
-  }
+    .btn:hover {
+      background: #b89628;
+    }
 
-  /* ---------- google review ---------- */
-  .google-review{background:var(--bg-panel); border-top:1px solid var(--hairline-soft); border-bottom:1px solid var(--hairline-soft);}
-  .google-review-inner{display:flex; align-items:center; justify-content:space-between; gap:60px; flex-wrap:wrap;}
-  .gr-copy{max-width:480px;}
-  .gr-copy h2{font-size:clamp(28px,3.4vw,38px); color:var(--ink); margin:14px 0 16px;}
-  .gr-copy p{color:var(--stone); font-size:15px; line-height:1.75; font-weight:300; margin-bottom:26px;}
-  .btn-google{
-    display:inline-block; background:linear-gradient(135deg, var(--gold-2), var(--gold-1));
-    color:var(--bg-deep); padding:14px 30px; font-size:13px; font-weight:500;
-    letter-spacing:0.08em; text-transform:uppercase; border-radius:2px;
-  }
-  .gr-qr{
-    display:flex; flex-direction:column; align-items:center; gap:14px;
-    background:var(--bg-deep); border:1px solid var(--hairline); padding:24px; flex-shrink:0;
-  }
-  .gr-qr img{width:180px; height:180px; border-radius:8px;}
-  .gr-qr span{font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone);}
-
-  /* ---------- contact ---------- */
-  .contact{background:var(--bg);}
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px;}
-  .contact-copy h2{font-size:clamp(32px,4.2vw,48px); margin-bottom:20px;}
-  .contact-copy p{color:var(--stone); font-size:15.5px; line-height:1.85; max-width:440px; margin-bottom:36px; font-weight:300;}
-  .contact-list{list-style:none;}
-  .contact-list li{
-    display:flex; gap:18px; padding:20px 0; border-top:1px solid var(--hairline-soft);
-    font-size:14.5px;
-  }
-  .contact-list li:last-child{border-bottom:1px solid var(--hairline-soft);}
-  .contact-list .k{color:var(--gold-1); min-width:96px; text-transform:uppercase; font-size:11px; letter-spacing:0.14em; padding-top:2px;}
-  .contact-list .v{color:var(--ink); font-weight:300; line-height:1.7;}
-  .contact-list a.v:hover{color:var(--gold-2);}
-  .contact-panel{
-    border:1px solid var(--hairline); padding:44px;
-    background:var(--bg-panel);
-  }
-  .contact-panel img{border:1px solid var(--hairline); margin-bottom:26px;}
-  .contact-panel .cap{font-size:12px; color:var(--stone); letter-spacing:0.08em; line-height:1.7;}
-  .contact-panel .cap strong{color:var(--gold-2); font-weight:500; display:block; margin-bottom:6px; font-family:'Fraunces', serif; font-size:17px; font-style:italic;}
-
-  form.inquiry{display:grid; gap:18px; margin-top:34px;}
-  form.inquiry label{
-    display:block; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase;
-    color:var(--stone); margin-bottom:8px;
-  }
-  form.inquiry input, form.inquiry textarea{
-    width:100%; background:transparent; border:none; border-bottom:1px solid var(--hairline);
-    color:var(--ink); font-family:'Work Sans', sans-serif; font-size:15px; padding:8px 2px;
-    font-weight:300;
-  }
-  form.inquiry input:focus, form.inquiry textarea:focus{
-    outline:none; border-color:var(--gold-1);
-  }
-  form.inquiry textarea{resize:vertical; min-height:80px;}
-  form.inquiry button{
-    justify-self:start; margin-top:8px;
-    background:linear-gradient(135deg, var(--gold-2), var(--gold-1));
-    color:var(--bg-deep); padding:14px 32px; font-size:12.5px; font-weight:500;
-    letter-spacing:0.08em; text-transform:uppercase; border:none; cursor:pointer;
-    transition:transform .3s ease;
-  }
-  form.inquiry button:hover{transform:translateY(-2px);}
-
-  /* ---------- footer ---------- */
-  footer{
-    background:var(--bg-deep); border-top:1px solid var(--hairline-soft);
-    padding:50px 0 34px;
-  }
-  .footer-row{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;}
-  .footer-brand{display:flex; align-items:center; gap:12px;}
-  .footer-brand img{width:30px; height:30px; border-radius:50%;}
-  .footer-brand span{font-family:'Fraunces', serif; font-size:15px; color:var(--stone);}
-  .footer-links{display:flex; gap:26px; font-size:12.5px; color:var(--stone);}
-  .footer-links a:hover{color:var(--gold-2);}
-  .footer-note{
-    margin-top:30px; padding-top:24px; border-top:1px solid var(--hairline-soft);
-    font-size:11.5px; color:var(--gold-dim); letter-spacing:0.04em;
-  }
-
-  /* ---------- reveal on scroll ---------- */
-  .reveal{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease;}
-  .reveal.in{opacity:1; transform:translateY(0);}
-
-  /* ---------- responsive ---------- */
-  @media (max-width:920px){
-    .nav-links{display:none;}
-    .service-grid{grid-template-columns:repeat(2,1fr);}
-    .about-grid{grid-template-columns:1fr; gap:50px;}
-    .about-mark{order:-1;}
-    .services-columns{grid-template-columns:1fr; gap:44px;}
-    .stat{padding:0 28px; border-right:none; border-bottom:1px solid var(--hairline-soft); padding-bottom:24px; margin-bottom:24px;}
-    .stat:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
-    .stats-row{flex-direction:column; align-items:center; gap:0;}
-    .approach-row{grid-template-columns:70px 1fr; }
-    .approach-row p{grid-column:1 / -1;}
-    .space-grid{grid-template-columns:1fr; }
-    .gallery-grid{grid-template-columns:repeat(2,1fr);}
-    .gallery-grid > a:nth-child(3n+1){grid-row:span 1;}
-    .gallery-grid > a:nth-child(3n+1) .gallery-item{aspect-ratio:1/1;}
-    .contact-grid{grid-template-columns:1fr; gap:56px;}
-  }
-  @media (max-width:560px){
-    section{padding:90px 0;}
-    .wrap{padding:0 22px;}
-    .hero{padding:110px 22px 70px;}
-    .hero-actions{flex-direction:column; width:100%;}
-    .btn-primary,.btn-ghost{width:100%; text-align:center;}
-    .service-grid{grid-template-columns:1fr;}
-  }
-</style>
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
 <body>
 
-<div class="cursor-glow" id="cursorGlow"></div>
+  <header>
+    <h1>Blossom Interior & Decorator</h1>
+    <p>Civil Painting, POP False Ceiling, Modular Kitchen & Complete Interior Solutions</p>
+  </header>
 
-<div class="float-ctas">
-  <a class="float-btn wa" href="https://wa.me/917208102029" target="_blank" rel="noopener" aria-label="WhatsApp">&#128172;</a>
-  <a class="float-btn call" href="tel:+917208102029" aria-label="Call">&#9742;</a>
-</div>
+  <nav>
+    <a href="#gallery">Photo Gallery</a>
+    <a href="#videos">Site Videos</a>
+    <a href="#review">Google Review</a>
+  </nav>
 
-<!-- ================= NAV ================= -->
-<header id="siteHeader">
-  <div class="wrap">
-    <nav>
-      <div class="brand">
-        <img src="images/logo.jpg" alt="Blossom Interior &amp; Decorator logo">
-        <div>
-          <div class="brand-name">Blossom</div>
-          <em>Interior &amp; Decorator</em>
+  <div class="container">
+
+    <section id="gallery">
+      <div class="section-header">
+        <h2 class="section-title">Our Recent Projects</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-1.jpg" onerror="this.src='1000246161.jpg'" alt="Sliding Wardrobe">
+          <div class="gallery-veil">Modern Wooden Sliding Wardrobe</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-2.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6910.png'" alt="Modular Kitchen">
+          <div class="gallery-veil">High-Gloss Modular Kitchen</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-3.jpg" onerror="this.src='1000243929.jpg'" alt="POP Ceiling">
+          <div class="gallery-veil">Living Room POP Cove Lighting</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-4.jpg" onerror="this.src='1000252793.jpg'" alt="Arch Wall Panel">
+          <div class="gallery-veil">CNC Pattern Textured Arch Wall</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-5.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6790.jpg'" alt="Reception Arch">
+          <div class="gallery-veil">Office Reception Arch Wall</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery-6.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6907.png'" alt="Commercial Gypsum Ceiling">
+          <div class="gallery-veil">Commercial Gypsum Ceiling</div>
         </div>
       </div>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#all-services">Full List</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">Studio</a>
-        <a href="#spaces">Spaces</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a class="nav-cta" href="#contact">Book a Consult</a>
-    </nav>
-  </div>
-</header>
+    </section>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-photo" style="background-image:url('images/gallery/gallery-1.jpg');"></div>
-  <div class="hero-photo-veil"></div>
-  <svg class="hero-bloom" viewBox="0 0 400 400" aria-hidden="true">
-    <g class="petal-mark" stroke="#c9a24e" transform="translate(200,200)">
-      <circle r="62" cx="0" cy="-62"/>
-      <circle r="62" cx="0" cy="62"/>
-      <circle r="62" cx="-62" cy="0"/>
-      <circle r="62" cx="62" cy="0"/>
-      <circle r="62" cx="-44" cy="-44"/>
-      <circle r="62" cx="44" cy="-44"/>
-      <circle r="62" cx="-44" cy="44"/>
-      <circle r="62" cx="44" cy="44"/>
-    </g>
-  </svg>
-  <div class="hero-inner">
-    <span class="eyebrow">Complete Interior Solutions · Thane · Kalyan · Dombivali</span>
-    <h1>Blossom</h1>
-    <p class="hero-sub">Designing Dreams. Creating Spaces. Improving Lives.</p>
-    <p class="hero-desc">A full-service interior design and painting studio for homes and commercial spaces that are planned end to end — from first sketch to the last coat of paint — with quality beyond expectation at every stage.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Book a Consult</a>
-      <a href="#services" class="btn-ghost">Explore Services</a>
-    </div>
-  </div>
-  <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
-</section>
+    <section id="videos" style="margin-top: 4rem;">
+      <div class="section-header">
+        <h2 class="section-title">Site Execution & Video Tours</h2>
+      </div>
 
-<!-- ================= TRUST BAR ================= -->
-<div class="trust-bar reveal">
-  <div class="wrap trust-bar-inner">
-    <div class="trust-item"><i>&#9733;&#9733;&#9733;&#9733;&#9733;</i><span>5.00 Google Rating</span></div>
-    <div class="trust-item"><strong>300+</strong><span>Happy Customers</span></div>
-    <div class="trust-item"><strong>27+</strong><span>Services Offered</span></div>
-    <div class="trust-item"><strong>24×7</strong><span>Open All Days</span></div>
-    <div class="trust-item"><strong>100%</strong><span>In-House Execution</span></div>
-  </div>
-</div>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="services">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">What We Do</span>
-      <h2>Four disciplines, one studio</h2>
-      <p>Every project draws on the same team from concept through handover — no handoffs, no guesswork, one point of accountability.</p>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="service-grid reveal">
-      <div class="service-card">
-        <span class="service-num">01</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="8" y="14" width="32" height="24" rx="1"/><path d="M8 22h32M18 14v24M28 14v8"/></svg>
-        <h3>Interior Design</h3>
-        <p>Space planning, material palettes and lighting concepts built around how each room is actually lived in.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">02</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 6 8 16v26h32V16z"/><path d="M18 42V26h12v16"/></svg>
-        <h3>Turnkey Projects</h3>
-        <p>One agreement, one timeline. Civil work, electrical, false ceiling and finishing managed under a single roof.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">03</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="10" y="8" width="28" height="32" rx="1"/><path d="M24 8v32M10 20h28"/></svg>
-        <h3>Modular Furniture</h3>
-        <p>Custom-built wardrobes, kitchens and storage, fabricated to measured drawings and finished on site.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">04</span>
-        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 6c6 6 6 12 0 18-6-6-6-12 0-18Z"/><path d="M24 24v18M14 42h20"/></svg>
-        <h3>Decor &amp; Styling</h3>
-        <p>The final layer — soft furnishings, art, accessories and styling that make a finished space feel complete.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WHY CHOOSE US ================= -->
-<section class="why-us" id="why-us">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Why Blossom</span>
-      <h2>Built for trust, not just for looks</h2>
-    </div>
-    <div class="why-grid reveal">
-      <div class="why-card">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 4 6 12v12c0 11 8 18 18 20 10-2 18-9 18-20V12z"/><path d="M17 24l5 5 10-11"/></svg>
-        <h3>In-House Execution</h3>
-        <p>No subcontracting the work out — our own carpenters, painters and site team handle your project start to finish.</p>
-      </div>
-      <div class="why-card">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="19"/><path d="M24 13v11l8 5"/></svg>
-        <h3>On-Time Delivery</h3>
-        <p>A fixed project timeline agreed upfront, with regular site updates so there are no surprises along the way.</p>
-      </div>
-      <div class="why-card">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="8" y="14" width="32" height="24" rx="2"/><path d="M8 20h32M16 28h8"/></svg>
-        <h3>Transparent Pricing</h3>
-        <p>A detailed, itemised quote before work begins — what you approve is what you're billed, with no hidden add-ons.</p>
-      </div>
-      <div class="why-card">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 44s16-8 16-22V9l-16-5-16 5v13c0 14 16 22 16 22Z"/></svg>
-        <h3>Workmanship Warranty</h3>
-        <p>Every turnkey project is backed by a workmanship warranty, with support after handover if anything needs attention.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FULL SERVICE LIST ================= -->
-<section id="all-services" class="all-services">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">The Full Range</span>
-      <h2>Every service, under one studio</h2>
-      <p>27+ services across interior work, renovation and specialist painting — for homes, offices and commercial spaces across Thane, Kalyan, Dombivali and nearby areas.</p>
-    </div>
-    <div class="services-columns reveal">
-      <div class="services-col">
-        <h3 class="col-head">Interior &amp; Renovation</h3>
-        <ul class="service-list">
-          <li>Modular kitchen design &amp; installation</li>
-          <li>Living room &amp; bedroom interior design</li>
-          <li>Full home interior decoration</li>
-          <li>Office &amp; commercial interior design</li>
-          <li>False ceiling &amp; POP / gypsum work</li>
-          <li>Custom furniture making &amp; woodwork</li>
-          <li>Civil &amp; home renovation work</li>
-          <li>Customized 3D wallpaper services</li>
-          <li>Wall panelling, artificial grass &amp; vinyl flooring</li>
-        </ul>
-      </div>
-      <div class="services-col">
-        <h3 class="col-head">Specialist Painting</h3>
-        <ul class="service-list">
-          <li>Interior &amp; exterior house painting</li>
-          <li>Texture painting &amp; wall finishes</li>
-          <li>Door, wood &amp; furniture painting</li>
-          <li>Wood &amp; metal polish coating (melamine / PU, anti-rust)</li>
-          <li>Roof painting — metal, tin shed &amp; industrial</li>
-          <li>Spray painting — PU, epoxy, Duco, industrial coatings</li>
-          <li>Waterproofing &amp; anti-damp (seelan) treatment</li>
-          <li>Post-painting deep cleaning</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= STATS ================= -->
-<section class="stats">
-  <div class="wrap">
-    <div class="stats-row reveal">
-      <div class="stat">
-        <span class="stat-num">27+</span>
-        <span class="stat-label">Services Offered</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">300+</span>
-        <span class="stat-label">Happy Customers</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">5.00</span>
-        <span class="stat-label">Rating · 11 Reviews</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ABOUT / PHILOSOPHY ================= -->
-<section id="about" class="about">
-  <div class="wrap about-grid">
-    <div class="about-copy reveal">
-      <span class="eyebrow">The Studio</span>
-      <h2>Interiors planned like architecture, finished like craft</h2>
-      <p>Blossom Interior &amp; Decorator was built on a simple premise: a home should be designed with the same discipline as it is built. We plan every space in full before a single panel is cut, so what you approve on paper is exactly what you receive.</p>
-      <p>From a single room refresh to a full turnkey fit-out, our team stays with the project from first measurement to final styling — one studio, one standard, start to finish.</p>
-      <div class="quality-badge">
-        <span class="dot"></span>
-        <span>Quality Beyond Expectation</span>
-      </div>
-    </div>
-    <div class="about-mark reveal">
-      <svg viewBox="0 0 400 400" aria-hidden="true">
-        <g class="petal-mark" stroke="#c9a24e" transform="translate(200,200)" opacity="0.9">
-          <circle r="88" cx="0" cy="-88"/>
-          <circle r="88" cx="0" cy="88"/>
-          <circle r="88" cx="-88" cy="0"/>
-          <circle r="88" cx="88" cy="0"/>
-        </g>
-        <g class="petal-mark" stroke="#f0dba3" transform="translate(200,200)" stroke-width="0.8">
-          <circle r="60" cx="-42" cy="-42"/>
-          <circle r="60" cx="42" cy="-42"/>
-          <circle r="60" cx="-42" cy="42"/>
-          <circle r="60" cx="42" cy="42"/>
-        </g>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- ================= APPROACH ================= -->
-<section id="approach" class="approach">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">How A Project Unfolds</span>
-      <h2>From first visit to final walkthrough</h2>
-    </div>
-    <div class="approach-list reveal">
-      <div class="approach-row">
-        <span class="step-label">Consult</span>
-        <h3>Site visit &amp; brief</h3>
-        <p>We walk the space with you, understand how you live in it, and note the constraints that will shape the plan.</p>
-      </div>
-      <div class="approach-row">
-        <span class="step-label">Design</span>
-        <h3>Layout &amp; material selection</h3>
-        <p>Detailed drawings, 3D views and a defined material and finish palette, reviewed with you before anything is fixed.</p>
-      </div>
-      <div class="approach-row">
-        <span class="step-label">Execute</span>
-        <h3>Turnkey delivery</h3>
-        <p>Civil, modular and finishing work managed on site by our team, against the approved drawings and timeline.</p>
-      </div>
-      <div class="approach-row">
-        <span class="step-label">Style</span>
-        <h3>Decor &amp; handover</h3>
-        <p>Furnishing, accessories and final styling, followed by a walkthrough before the keys are handed back to you.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SPACES ================= -->
-<section id="spaces" class="spaces">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Spaces We Shape</span>
-      <h2>Every room, considered</h2>
-      <p>A preview of the categories we design for — share your own space and we'll bring the same approach to it.</p>
-    </div>
-    <div class="space-grid reveal">
-      <div class="space-card">
-        <svg class="room" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="375" fill="#1c160d"/>
-          <rect y="230" width="300" height="145" fill="#241d12"/>
-          <rect x="30" y="240" width="130" height="50" rx="3" fill="none" stroke="#8a6d34" stroke-width="1"/>
-          <circle cx="230" cy="120" r="46" fill="none" stroke="#c9a24e" stroke-width="0.8"/>
-          <line x1="0" y1="230" x2="300" y2="230" stroke="#3a3120" stroke-width="1"/>
-        </svg>
-        <div class="veil"></div>
-        <div class="label"><span class="eyebrow">01</span><h3>Living Rooms</h3></div>
-      </div>
-      <div class="space-card">
-        <svg class="room" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="375" fill="#181209"/>
-          <rect x="60" y="180" width="180" height="90" rx="2" fill="none" stroke="#8a6d34" stroke-width="1"/>
-          <line x1="60" y1="210" x2="240" y2="210" stroke="#3a3120"/>
-          <circle cx="80" cy="90" r="30" fill="none" stroke="#f0dba3" stroke-width="0.7"/>
-          <circle cx="220" cy="90" r="30" fill="none" stroke="#f0dba3" stroke-width="0.7"/>
-        </svg>
-        <div class="veil"></div>
-        <div class="label"><span class="eyebrow">02</span><h3>Bedrooms</h3></div>
-      </div>
-      <div class="space-card">
-        <svg class="room" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="375" fill="#1c160d"/>
-          <rect y="260" width="300" height="115" fill="#241d12"/>
-          <rect x="20" y="200" width="260" height="60" fill="none" stroke="#8a6d34" stroke-width="1"/>
-          <line x1="20" y1="230" x2="280" y2="230" stroke="#3a3120"/>
-          <circle cx="150" cy="110" r="52" fill="none" stroke="#c9a24e" stroke-width="0.7"/>
-        </svg>
-        <div class="veil"></div>
-        <div class="label"><span class="eyebrow">03</span><h3>Kitchens</h3></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALLERY ================= -->
-<!-- To activate a real photo: drop a file named gallery-1.jpg (through gallery-8.jpg)
-     into the /images/gallery/ folder. Until then, this tile shows an elegant
-     placeholder automatically — nothing to configure. -->
-<section id="gallery" class="gallery">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Recent Work</span>
-      <h2>Project gallery</h2>
-      <p>A look at completed rooms and finishes. Add your own project photos any time — see the guide at the top of this file.</p>
-    </div>
-    <div class="gallery-grid reveal">
-      <a class="gallery-item" href="images/gallery/gallery-1.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-1.jpg" alt="Blossom project photo 1" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-1.jpg</span>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DapJ-u6sKGR/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>Living Room &amp; Pooja Unit</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery/gallery-2.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-2.jpg" alt="Blossom project photo 2" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-2.jpg</span>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DdLFmYVMr6S/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>Modular Kitchen</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery/gallery-3.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-3.jpg" alt="Blossom project photo 3" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-3.jpg</span>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DdBbRDgx9mn/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>Bedroom — In Progress</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery/gallery-4.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-4.jpg" alt="Blossom project photo 4" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-4.jpg</span>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DclYUyGshMY/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>Sliding Wardrobe</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery/gallery-5.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-5.jpg" alt="Blossom project photo 5" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-5.jpg</span>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DcknfLAs_0E/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>TV Unit &amp; Wall Panelling</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery/gallery-6.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-6.jpg" alt="Blossom project photo 6" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-6.jpg</span>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DcYy2NMsw2H/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>Pooja Unit Detail</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery/gallery-7.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-7.jpg" alt="Blossom project photo 7" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-7.jpg</span>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/DcUOqWaRrvf/embed" scrolling="no" allowtransparency="true"></iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>Kitchen Cabinet Detail</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery/gallery-8.jpg" target="_blank" rel="noopener">
-        <img src="images/gallery/gallery-8.jpg" alt="Blossom project photo 8" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="gallery-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          <span>Add gallery-8.jpg</span>
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe src="https://www.instagram.com/reel/Dat91rUMzKk/embed" scrolling="no" allowtransparency="true">️</iframe>
+          </div>
         </div>
-        <div class="gallery-veil"><span>Walk-in Wardrobe</span></div>
-      </a>
-    </div>
-
-    <div class="reveal" style="margin-top:70px;">
-      <span class="eyebrow">Commercial Fit-Out</span>
-      <h3 style="font-size:22px; margin:10px 0 26px; color:var(--ink); font-weight:500;">A recent salon &amp; spa project</h3>
-      <div class="gallery-grid" style="grid-template-columns:repeat(4,1fr);">
-        <a class="gallery-item" href="images/commercial/salon-1.jpg" target="_blank" rel="noopener" style="aspect-ratio:1/1;">
-          <img src="images/commercial/salon-1.jpg" alt="Salon styling area" loading="lazy">
-          <div class="gallery-veil"><span>Styling Area</span></div>
-        </a>
-        <a class="gallery-item" href="images/commercial/salon-2.jpg" target="_blank" rel="noopener" style="aspect-ratio:1/1;">
-          <img src="images/commercial/salon-2.jpg" alt="Salon reception area" loading="lazy">
-          <div class="gallery-veil"><span>Reception Area</span></div>
-        </a>
-        <a class="gallery-item" href="images/commercial/salon-3.jpg" target="_blank" rel="noopener" style="aspect-ratio:1/1;">
-          <img src="images/commercial/salon-3.jpg" alt="Spa and hair wash bay" loading="lazy">
-          <div class="gallery-veil"><span>Spa &amp; Hair Wash Bay</span></div>
-        </a>
-        <a class="gallery-item" href="images/commercial/salon-4.jpg" target="_blank" rel="noopener" style="aspect-ratio:1/1;">
-          <img src="images/commercial/salon-4.jpg" alt="Pedicure lounge" loading="lazy">
-          <div class="gallery-veil"><span>Pedicure Lounge</span></div>
-        </a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ================= VIDEO SHOWCASE ================= -->
-<!-- To activate: put a video file at /videos/showreel.mp4 and a cover
-     image at /images/video-poster.jpg. Until then this shows a clean
-     "coming soon" placeholder — nothing to configure. -->
-<section class="video-section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Walkthroughs</span>
-      <h2>See a project come together</h2>
-      <p>A short walkthrough of a recent turnkey project, start to finish.</p>
-    </div>
-    <div class="video-frame reveal">
-      <video controls playsinline poster="images/video-poster.jpg"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <source src="videos/showreel.mp4" type="video/mp4">
-      </video>
-      <div class="video-placeholder">
-        <div class="play-ring"><i>&#9658;</i></div>
-        <p>Video coming soon — add videos/showreel.mp4</p>
+    <section id="review">
+      <div class="qr-card">
+        <h2 class="section-title" style="font-size: 1.5rem;">Rate Us On Google</h2>
+        <p style="margin-top: 10px;">Aapka feedback hamare liye bohot keemti hai! Niche diye QR Code ko scan karein ya button par click karke rating dein.</p>
+        <img src="images/gallery/qr-code.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6753.jpg'" alt="Google Review QR Code">
+        <br>
+        <a href="https://g.page/r/your-google-review-link" target="_blank" class="btn">Scan / Leave a Review</a>
       </div>
-    </div>
+    </section>
+
   </div>
-</section>
 
-<!-- ================= QUOTE STRIP ================= -->
-<section class="quote-strip">
-  <div class="wrap">
-    <blockquote class="reveal">"Designing dreams, creating spaces, improving lives."</blockquote>
-    <cite>— The Blossom studio ethos</cite>
-  </div>
-</section>
-
-<!-- ================= GOOGLE REVIEW ================= -->
-<section class="google-review">
-  <div class="wrap google-review-inner">
-    <div class="gr-copy reveal">
-      <span class="eyebrow">Loved Our Work?</span>
-      <h2>Leave us a Google review</h2>
-      <p>It takes 30 seconds and helps other families in Thane, Kalyan and Dombivali find us. Scan the code or tap below on your phone.</p>
-      <a class="btn-google" href="https://www.google.com/maps/search/?api=1&query=Blossom+Interior+%26+Decorator+Kalyan" target="_blank" rel="noopener">Write a Review</a>
-    </div>
-    <div class="gr-qr reveal">
-      <img src="images/google-qr.png" alt="Scan to review Blossom Interior & Decorator on Google">
-      <span>Scan to review us on Google</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section class="faq">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Common Questions</span>
-      <h2>Before you get in touch</h2>
-    </div>
-    <div class="faq-list reveal">
-      <details class="faq-item" open>
-        <summary>How long does a full home interior take?</summary>
-        <p>Most 2–3 BHK turnkey projects take 45–75 days from design approval to handover, depending on scope. We share a fixed timeline before work starts.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do you handle both design and execution?</summary>
-        <p>Yes — Blossom manages the full project in-house, from space planning and material selection through carpentry, painting, civil work and final styling.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Which areas do you serve?</summary>
-        <p>We work across Thane, Kalyan, Dombivali and nearby areas, for both residential homes and commercial spaces such as offices, shops and salons.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Is the quote fixed, or can costs change later?</summary>
-        <p>We share an itemised quote before starting. Any change you request mid-project is priced separately and approved by you before we proceed — no surprise billing.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do you offer a warranty after handover?</summary>
-        <p>Yes, every turnkey project includes a workmanship warranty, and our team remains reachable for support after the keys are handed back to you.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-copy reveal">
-      <span class="eyebrow">Get In Touch</span>
-      <h2>Start your project</h2>
-      <p>Tell us about your space and timeline. We'll arrange a site visit and walk you through how Blossom can take it from plan to finished room — serving Thane, Kalyan, Dombivali and nearby areas.</p>
-      <ul class="contact-list">
-        <li><span class="k">Visit</span><span class="v">B-Wing, Flat No. 301, Sai Shradlha Park, Adawali Dhokli, Near Mountain Green, Haji Malang Road, Kalyan East – 421306</span></li>
-        <li><span class="k">Call</span><a class="v" href="tel:+917208102029">7208102029</a></li>
-        <li><span class="k">Email</span><a class="v" href="mailto:blossominteriord@gmail.com">blossominteriord@gmail.com</a></li>
-        <li><span class="k">Email</span><a class="v" href="mailto:b70801616@gmail.com">b70801616@gmail.com</a></li>
-      </ul>
-    </div>
-    <div class="contact-panel reveal">
-      <img src="images/signboard.png" alt="Blossom Interior & Decorator studio signboard" loading="lazy">
-      <p class="cap"><strong>Visit the studio</strong>B-Wing, Flat No. 301, Sai Shradlha Park, Adawali Dhokli, Near Mountain Green, Haji Malang Road, Kalyan East – 421306</p>
-      <form class="inquiry" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent — we will call you soon';">
-        <div>
-          <label for="name">Full name</label>
-          <input id="name" type="text" required placeholder="Your name">
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input id="phone" type="tel" required placeholder="Contact number">
-        </div>
-        <div>
-          <label for="msg">About your space</label>
-          <textarea id="msg" placeholder="Flat size, location, what you'd like designed…"></textarea>
-        </div>
-        <button type="submit">Request a Consult</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <div class="wrap">
-    <div class="footer-row">
-      <div class="footer-brand">
-        <img src="images/logo.jpg" alt="Blossom logo">
-        <span>Blossom Interior &amp; Decorator</span>
-      </div>
-      <div class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#about">Studio</a>
-        <a href="#spaces">Spaces</a>
-        <a href="tel:+917208102029">7208102029</a>
-      </div>
-    </div>
-    <div class="footer-note">Kalyan East, Maharashtra — Serving Thane, Kalyan &amp; Dombivali — Complete Interior &amp; Painting Solutions <span style="color:var(--hairline); opacity:0.7;">· site v6 · 16 Aug</span></div>
-  </div>
-</footer>
-
-<script>
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 40);
-  });
-
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
-
-  // subtle ambient gold glow that follows the cursor — desktop only
-  const glow = document.getElementById('cursorGlow');
-  if (matchMedia('(hover:hover)').matches) {
-    window.addEventListener('mousemove', (e) => {
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
-    });
-  }
-</script>
+  <footer>
+    <p>&copy; 2026 Blossom Interior & Decorator. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
