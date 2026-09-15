@@ -1,307 +1,1114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blossom Interior & Decorator - Civil Painting & Interior Solutions</title>
-  <style>
-    :root {
-      --primary: #1a252f;
-      --accent: #d4af37;
-      --light: #f8f9fa;
-      --dark: #212529;
-      --card-bg: #ffffff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Blossom Interior & Decorator - Complete Home & Commercial Solutions in Kalyan, Dombivali, Thane and nearby areas.">
+<meta name="theme-color" content="#0b0906">
+<title>Blossom Interior & Decorator | Complete Home & Commercial Solutions</title>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 2.5rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      color: var(--accent);
-      font-size: 2.4rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-    }
-
-    nav {
-      background: #111111;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: #ffffff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2.5rem 1rem;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      color: var(--primary);
-      border-bottom: 3px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 5px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .gallery-item {
-      background: var(--card-bg);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .gallery-veil {
-      padding: 1rem;
-      background: #fff;
-      text-align: center;
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .video-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 10px;
-    }
-
-    .iframe-wrapper {
-      position: relative;
-      padding-bottom: 125%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .iframe-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .qr-card {
-      background: #ffffff;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 3rem auto 0 auto;
-      border: 1px solid #eaeaea;
-    }
-
-    .qr-card img {
-      max-width: 240px;
-      border-radius: 8px;
-      margin: 1.5rem 0;
-      border: 1px solid #ddd;
-      padding: 5px;
-      background: #fff;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #000;
-      padding: 0.9rem 1.8rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #b89628;
-    }
-
-    footer {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 4rem;
-    }
-  </style>
+<style>
+:root{
+--black:#0b0906;
+--dark:#12100c;
+--panel:#19150e;
+--panel2:#211b11;
+--gold:#c9a24e;
+--lightgold:#f0dba3;
+--dim:#8a6d34;
+--white:#f4eee2;
+--text:#d2c7b2;
+--line:#39301f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+background:var(--black);
+color:var(--white);
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.65;
+overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1150px,92%);margin:auto}
+header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:999;
+background:rgba(11,9,6,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(201,162,78,.15)
+}
+.nav{
+height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+.logo{
+display:flex;
+align-items:center;
+gap:12px
+}
+.logo-icon{
+width:43px;
+height:43px;
+border:1px solid var(--gold);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--lightgold);
+font-family:Georgia,serif;
+font-size:22px
+}
+.logo-text strong{
+display:block;
+font-family:Georgia,serif;
+font-size:18px;
+font-weight:500
+}
+.logo-text span{
+display:block;
+font-size:10px;
+color:var(--gold);
+letter-spacing:2px;
+text-transform:uppercase
+}
+.navlinks{
+display:flex;
+gap:30px;
+font-size:13px;
+color:#b7aa91
+}
+.navlinks a:hover{color:var(--lightgold)}
+.navbtn{
+border:1px solid var(--gold);
+padding:10px 18px;
+font-size:12px;
+letter-spacing:1px;
+text-transform:uppercase;
+color:var(--lightgold)
+}
+.navbtn:hover{
+background:var(--gold);
+color:var(--black)
+}
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:130px 20px 80px;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 50% 20%,rgba(201,162,78,.14),transparent 42%),
+linear-gradient(180deg,#100d08,#080705)
+}
+.hero:before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+border:1px solid rgba(201,162,78,.09);
+border-radius:50%;
+box-shadow:
+0 0 0 80px rgba(201,162,78,.015),
+0 0 0 160px rgba(201,162,78,.012),
+0 0 0 240px rgba(201,162,78,.008);
+pointer-events:none
+}
+.hero-content{
+position:relative;
+z-index:2;
+max-width:850px
+}
+.eyebrow{
+color:var(--gold);
+font-size:11px;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:22px
+}
+.hero h1{
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(50px,9vw,100px);
+font-weight:400;
+line-height:.95;
+background:linear-gradient(180deg,#f5e6b5,#c9a24e);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+margin-bottom:18px
+}
+.hero-sub{
+font-family:Georgia,serif;
+font-size:clamp(20px,3vw,28px);
+font-style:italic;
+color:#a99c84;
+margin-bottom:25px
+}
+.hero p{
+max-width:650px;
+margin:auto;
+color:#aaa08e;
+font-size:15px;
+line-height:1.9
+}
+.buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+margin-top:35px
+}
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 27px;
+font-size:12px;
+letter-spacing:1px;
+text-transform:uppercase;
+transition:.25s
+}
+.btn-gold{
+background:linear-gradient(135deg,var(--lightgold),var(--gold));
+color:var(--black);
+font-weight:bold;
+box-shadow:0 8px 30px rgba(201,162,78,.18)
+}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-outline{
+border:1px solid var(--line);
+color:var(--white)
+}
+.btn-outline:hover{
+border-color:var(--gold);
+color:var(--lightgold)
+}
+.scroll{
+position:absolute;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+font-size:9px;
+letter-spacing:3px;
+color:#807561;
+text-transform:uppercase
+}
+section{padding:85px 0}
+.section-title{
+max-width:750px;
+margin-bottom:42px
+}
+.section-title .eyebrow{margin-bottom:12px}
+h2{
+font-family:Georgia,serif;
+font-size:clamp(32px,5vw,52px);
+font-weight:400;
+line-height:1.15;
+margin-bottom:14px
+}
+.section-title p{
+color:#9f9583;
+font-size:15px
+}
+.trust{
+background:var(--panel);
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line)
+}
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr)
+}
+.trust-item{
+text-align:center;
+padding:27px 12px;
+border-right:1px solid var(--line)
+}
+.trust-item:last-child{border-right:0}
+.trust-item strong{
+display:block;
+font-family:Georgia,serif;
+font-size:22px;
+color:var(--lightgold);
+margin-bottom:5px
+}
+.trust-item span{
+font-size:10px;
+color:#918571;
+letter-spacing:1px;
+text-transform:uppercase
+}
+.services{
+background:var(--black)
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+.card{
+background:var(--panel);
+border:1px solid var(--line);
+padding:30px 25px;
+min-height:220px;
+transition:.3s
+}
+.card:hover{
+transform:translateY(-5px);
+border-color:var(--gold)
+}
+.card-number{
+color:var(--gold);
+font-size:11px;
+letter-spacing:2px;
+margin-bottom:22px
+}
+.card h3{
+font-family:Georgia,serif;
+font-size:21px;
+font-weight:400;
+margin-bottom:12px
+}
+.card p{
+color:#9e9481;
+font-size:13.5px
+}
+.services-full{
+background:var(--dark)
+}
+.service-columns{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px
+}
+.service-box{
+border:1px solid var(--line);
+background:var(--panel);
+padding:30px
+}
+.service-box h3{
+font-family:Georgia,serif;
+font-weight:400;
+font-size:24px;
+color:var(--lightgold);
+margin-bottom:20px
+}
+.service-list{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:0 25px;
+list-style:none
+}
+.service-list li{
+font-size:13px;
+color:#b8ad99;
+padding:9px 0;
+border-bottom:1px solid rgba(255,255,255,.045)
+}
+.service-list li:before{
+content:"✓";
+color:var(--gold);
+margin-right:9px
+}
+.why{
+background:var(--black)
+}
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+.why-card{
+background:var(--panel);
+border:1px solid var(--line);
+padding:30px 24px
+}
+.why-number{
+color:var(--gold);
+font-size:12px;
+letter-spacing:2px;
+margin-bottom:18px
+}
+.why-card h3{
+font-family:Georgia,serif;
+font-size:19px;
+font-weight:400;
+margin-bottom:10px
+}
+.why-card p{
+font-size:13px;
+color:#9d9380
+}
+.process{
+background:var(--panel)
+}
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+.step{
+border-top:1px solid var(--gold);
+padding:25px 5px
+}
+.step-number{
+color:var(--gold);
+font-size:11px;
+letter-spacing:2px;
+margin-bottom:14px
+}
+.step h3{
+font-family:Georgia,serif;
+font-weight:400;
+font-size:20px;
+margin-bottom:9px
+}
+.step p{
+font-size:13px;
+color:#9d9380
+}
+.faq{
+background:var(--dark)
+}
+.faq-list{
+max-width:850px
+}
+details{
+border-bottom:1px solid var(--line)
+}
+summary{
+cursor:pointer;
+list-style:none;
+padding:22px 0;
+font-family:Georgia,serif;
+font-size:17px;
+color:var(--white)
+}
+summary::-webkit-details-marker{display:none}
+summary:after{
+content:"+";
+float:right;
+color:var(--gold);
+font-size:22px
+}
+details[open] summary:after{content:"−"}
+details p{
+color:#9d9380;
+font-size:14px;
+padding:0 0 22px;
+max-width:700px
+}
+.lead{
+background:
+radial-gradient(circle at 80% 20%,rgba(201,162,78,.10),transparent 35%),
+var(--black)
+}
+.lead-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:start
+}
+.contact-list{
+list-style:none;
+margin-top:28px
+}
+.contact-list li{
+padding:17px 0;
+border-bottom:1px solid var(--line)
+}
+.contact-list .label{
+display:block;
+font-size:10px;
+color:var(--gold);
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:4px
+}
+.contact-list .value{
+font-size:14px;
+color:#c9c0af
+}
+.form{
+background:var(--panel);
+border:1px solid var(--gold);
+padding:30px
+}
+.form h3{
+font-family:Georgia,serif;
+font-size:26px;
+font-weight:400;
+color:var(--lightgold);
+margin-bottom:20px
+}
+.field{margin-bottom:16px}
+.field label{
+display:block;
+font-size:11px;
+color:#a99d87;
+letter-spacing:1px;
+margin-bottom:7px
+}
+.field input,
+.field textarea{
+width:100%;
+border:1px solid var(--line);
+background:#0d0b08;
+color:var(--white);
+padding:13px 14px;
+font-family:Arial,sans-serif;
+outline:none
+}
+.field input:focus,
+.field textarea:focus{border-color:var(--gold)}
+.field textarea{
+height:120px;
+resize:vertical
+}
+.form button{
+width:100%;
+border:0;
+cursor:pointer
+}
+footer{
+background:#070604;
+border-top:1px solid var(--line);
+padding:38px 0
+}
+.footer{
+display:flex;
+justify-content:space-between;
+gap:25px;
+flex-wrap:wrap;
+align-items:center
+}
+.footer-brand{
+font-family:Georgia,serif;
+color:var(--lightgold);
+font-size:18px
+}
+.footer-brand small{
+display:block;
+font-family:Arial,sans-serif;
+font-size:10px;
+color:#766c5c;
+letter-spacing:1px;
+margin-top:4px
+}
+.footer-links{
+display:flex;
+gap:20px;
+font-size:12px;
+color:#958a76
+}
+.footer-links a:hover{color:var(--gold)}
+.footer-note{
+margin-top:25px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.05);
+font-size:11px;
+color:#6f6658
+}
+.float{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:998;
+display:flex;
+gap:8px
+}
+.float a{
+width:48px;
+height:48px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#15120c;
+border:1px solid var(--gold);
+color:var(--lightgold);
+font-size:12px;
+font-weight:bold;
+box-shadow:0 5px 20px rgba(0,0,0,.5)
+}
+@media(max-width:900px){
+.navlinks{display:none}
+.cards{grid-template-columns:1fr 1fr}
+.why-grid{grid-template-columns:1fr 1fr}
+.process-grid{grid-template-columns:1fr 1fr}
+.trust-grid{grid-template-columns:1fr 1fr}
+.trust-item:nth-child(2n){border-right:0}
+.trust-item{border-bottom:1px solid var(--line)}
+.lead-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+section{padding:65px 0}
+.navbtn{padding:9px 12px}
+.logo-text strong{font-size:16px}
+.hero{padding-top:120px}
+.hero h1{font-size:55px}
+.cards,
+.why-grid,
+.process-grid,
+.service-columns{grid-template-columns:1fr}
+.service-list{grid-template-columns:1fr}
+.trust-grid{grid-template-columns:1fr 1fr}
+.trust-item{padding:20px 8px}
+.footer{align-items:flex-start}
+.footer-links{flex-wrap:wrap}
+.float{right:12px;bottom:12px}
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Blossom Interior & Decorator</h1>
-    <p>Civil Painting, POP False Ceiling, Modular Kitchen & Complete Interior Solutions</p>
-  </header>
+<header>
+<div class="container nav">
 
-  <nav>
-    <a href="#gallery">Photo Gallery</a>
-    <a href="#videos">Site Videos</a>
-    <a href="#review">Google Review</a>
-  </nav>
+<a href="#" class="logo">
+<div class="logo-icon">B</div>
+<div class="logo-text">
+<strong>Blossom</strong>
+<span>Interior &amp; Decorator</span>
+</div>
+</a>
 
-  <div class="container">
+<nav class="navlinks">
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <section id="gallery">
-      <div class="section-header">
-        <h2 class="section-title">Our Recent Projects</h2>
-      </div>
+<a class="navbtn" href="tel:+917208102029">Call Now</a>
 
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/gallery/gallery-1.jpg" onerror="this.src='1000246161.jpg'" alt="Sliding Wardrobe">
-          <div class="gallery-veil">Modern Wooden Sliding Wardrobe</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/gallery/gallery-2.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6910.png'" alt="Modular Kitchen">
-          <div class="gallery-veil">High-Gloss Modular Kitchen</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/gallery/gallery-3.jpg" onerror="this.src='1000243929.jpg'" alt="POP Ceiling">
-          <div class="gallery-veil">Living Room POP Cove Lighting</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/gallery/gallery-4.jpg" onerror="this.src='1000252793.jpg'" alt="Arch Wall Panel">
-          <div class="gallery-veil">CNC Pattern Textured Arch Wall</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/gallery/gallery-5.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6790.jpg'" alt="Reception Arch">
-          <div class="gallery-veil">Office Reception Arch Wall</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/gallery/gallery-6.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6907.png'" alt="Commercial Gypsum Ceiling">
-          <div class="gallery-veil">Commercial Gypsum Ceiling</div>
-        </div>
-      </div>
-    </section>
+</div>
+</header>
 
-    <section id="videos" style="margin-top: 4rem;">
-      <div class="section-header">
-        <h2 class="section-title">Site Execution & Video Tours</h2>
-      </div>
+<main>
 
-      <div class="video-grid">
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/DapJ-u6sKGR/embed" scrolling="no" allowtransparency="true"></iframe>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/DdLFmYVMr6S/embed" scrolling="no" allowtransparency="true"></iframe>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/DdBbRDgx9mn/embed" scrolling="no" allowtransparency="true"></iframe>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/DclYUyGshMY/embed" scrolling="no" allowtransparency="true"></iframe>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/DcknfLAs_0E/embed" scrolling="no" allowtransparency="true"></iframe>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/DcYy2NMsw2H/embed" scrolling="no" allowtransparency="true"></iframe>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/DcUOqWaRrvf/embed" scrolling="no" allowtransparency="true"></iframe>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="iframe-wrapper">
-            <iframe src="https://www.instagram.com/reel/Dat91rUMzKk/embed" scrolling="no" allowtransparency="true">️</iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="hero">
 
-    <section id="review">
-      <div class="qr-card">
-        <h2 class="section-title" style="font-size: 1.5rem;">Rate Us On Google</h2>
-        <p style="margin-top: 10px;">Aapka feedback hamare liye bohot keemti hai! Niche diye QR Code ko scan karein ya button par click karke rating dein.</p>
-        <img src="images/gallery/qr-code.jpg" onerror="this.src='96be0ae9-d70f-485b-8359-5c9a3f790771-1_all_6753.jpg'" alt="Google Review QR Code">
-        <br>
-        <a href="https://g.page/r/your-google-review-link" target="_blank" class="btn">Scan / Leave a Review</a>
-      </div>
-    </section>
+<div class="hero-content">
 
-  </div>
+<div class="eyebrow">Complete Interior Solutions · Thane · Kalyan · Dombivali</div>
 
-  <footer>
-    <p>&copy; 2026 Blossom Interior & Decorator. All Rights Reserved.</p>
-  </footer>
+<h1>Blossom</h1>
+
+<div class="hero-sub">Complete Home &amp; Commercial Solutions</div>
+
+<p>
+Blossom Interior &amp; Decorator provides complete home, office and commercial
+interior, renovation, civil, painting and finishing solutions with quality
+workmanship from start to final handover.
+</p>
+
+<div class="buttons">
+<a class="btn btn-gold" href="#contact">Get a Quote</a>
+<a class="btn btn-outline" href="https://wa.me/917208102029" target="_blank">WhatsApp Us</a>
+<a class="btn btn-outline" href="tel:+917208102029">Call 7208102029</a>
+</div>
+
+</div>
+
+<div class="scroll">Scroll</div>
+
+</section>
+
+
+<section class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-item">
+<strong>Google</strong>
+<span>Business Profile</span>
+</div>
+
+<div class="trust-item">
+<strong>Home</strong>
+<span>Interior Solutions</span>
+</div>
+
+<div class="trust-item">
+<strong>20+</strong>
+<span>Services &amp; Solutions</span>
+</div>
+
+<div class="trust-item">
+<strong>Local</strong>
+<span>Site Service</span>
+</div>
+
+<div class="trust-item">
+<strong>End-to-End</strong>
+<span>Project Execution</span>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">What We Do</div>
+<h2>Complete solutions, one team</h2>
+<p>
+From civil work and carpentry to painting, false ceiling, modular kitchen,
+electrical and plumbing, we bring major interior and finishing services
+together for your project.
+</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-number">01</div>
+<h3>House Interior</h3>
+<p>
+Interior decoration and finishing solutions for living rooms, bedrooms,
+kitchens and complete homes.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">02</div>
+<h3>Civil &amp; Renovation</h3>
+<p>
+Civil work, renovation, electrical, plumbing, false ceiling and finishing
+work for homes and commercial spaces.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">03</div>
+<h3>Modular Kitchen &amp; Furniture</h3>
+<p>
+Modular kitchens, furniture installation, TV units, carpentry and
+customised interior furniture solutions.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">04</div>
+<h3>Painting &amp; Finishing</h3>
+<p>
+Interior and exterior painting, texture, wallpaper, wall panelling,
+waterproofing, spray painting and polish work.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="services-full">
+
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">The Full Range</div>
+<h2>Every service, under one roof</h2>
+<p>
+Complete services across interior work, renovation and specialist painting
+for homes, offices and commercial spaces.
+</p>
+</div>
+
+<div class="service-columns">
+
+<div class="service-box">
+
+<h3>Interior &amp; Renovation</h3>
+
+<ul class="service-list">
+<li>Modular kitchen installation</li>
+<li>House interior decoration</li>
+<li>Complete home renovation</li>
+<li>Office &amp; commercial interior work</li>
+<li>False ceiling &amp; POP / gypsum work</li>
+<li>Carpentry &amp; furniture installation</li>
+<li>Civil &amp; renovation work</li>
+<li>Electrical work</li>
+<li>Plumbing work</li>
+<li>Customised wallpaper installation</li>
+<li>Wall panelling &amp; wallpaper</li>
+<li>TV unit work</li>
+</ul>
+
+</div>
+
+
+<div class="service-box">
+
+<h3>Specialist Painting &amp; Finishing</h3>
+
+<ul class="service-list">
+<li>Interior &amp; exterior house painting</li>
+<li>Texture painting &amp; wall finishes</li>
+<li>Door painting</li>
+<li>Wood &amp; furniture painting</li>
+<li>Wooden polish</li>
+<li>PU deco polish</li>
+<li>Melamine polish</li>
+<li>Building painting</li>
+<li>Roof painting</li>
+<li>Industrial painting</li>
+<li>Spray painting</li>
+<li>PU / epoxy / Duco coatings</li>
+<li>Waterproofing</li>
+<li>Anti-damp treatment</li>
+<li>Aluminium partition work</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="why" id="why">
+
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">Why Choose Us</div>
+<h2>Reliable Work. Clean Finishing. Complete Solutions.</h2>
+<p>
+One team for your interior, renovation, painting and finishing requirements.
+</p>
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<div class="why-number">01</div>
+<h3>Complete Home Solution</h3>
+<p>
+Multiple interior, civil and finishing services handled together for your project.
+</p>
+</div>
+
+<div class="why-card">
+<div class="why-number">02</div>
+<h3>Experienced Workmanship</h3>
+<p>
+Practical site execution with attention to finishing and details.
+</p>
+</div>
+
+<div class="why-card">
+<div class="why-number">03</div>
+<h3>Multiple Services</h3>
+<p>
+Painting, false ceiling, carpentry, electrical, plumbing, kitchen and more.
+</p>
+</div>
+
+<div class="why-card">
+<div class="why-number">04</div>
+<h3>Proper Project Execution</h3>
+<p>
+Work is coordinated from the site requirement through final handover.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="process" id="process">
+
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">How A Project Unfolds</div>
+<h2>From first visit to final handover</h2>
+<p>
+A simple process focused on clear requirements, proper execution and finishing.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Site Visit &amp; Requirement</h3>
+<p>
+We understand your location, space and required work.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Quotation</h3>
+<p>
+The agreed work and quotation are discussed before starting.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Work Execution</h3>
+<p>
+Civil, carpentry, electrical, plumbing, ceiling, painting and finishing work is carried out.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Final Handover</h3>
+<p>
+Finishing and installation work is completed followed by the final walkthrough.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+<div class="eyebrow">Common Questions</div>
+<h2>Before you get in touch</h2>
+</div>
+
+<div class="faq-list">
+
+<details open>
+<summary>Which services do you provide?</summary>
+<p>
+We provide civil work, carpentry, electrical, plumbing, false ceiling,
+painting, modular kitchen, furniture installation, waterproofing, wallpaper,
+wall panelling, polish, spray painting, aluminium partition and related
+interior finishing services.
+</p>
+</details>
+
+<details>
+<summary>Which areas do you serve?</summary>
+<p>
+We work across Kalyan, Dombivali, Thane, Bhiwandi, Badlapur, Ambernath,
+Ulhasnagar, Navi Mumbai and nearby areas.
+</p>
+</details>
+
+<details>
+<summary>Do you provide a site visit?</summary>
+<p>
+Yes. Contact us with your project location and requirements to discuss a
+site visit and quotation.
+</p>
+</details>
+
+<details>
+<summary>How can I request a quotation?</summary>
+<p>
+Use the enquiry form below or contact us directly on WhatsApp or phone.
+</p>
+</details>
+
+<details>
+<summary>Can I request different interior or painting services together?</summary>
+<p>
+Yes. Multiple services such as civil work, carpentry, false ceiling,
+painting, electrical, plumbing, kitchen and finishing work can be discussed
+for the same project.
+</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="lead" id="contact">
+
+<div class="container lead-grid">
+
+<div>
+
+<div class="section-title">
+<div class="eyebrow">Get In Touch</div>
+<h2>Start your project</h2>
+<p>
+Tell us about your space, location and requirements. We'll discuss the work,
+arrange a site visit where applicable and provide a quotation.
+</p>
+</div>
+
+<ul class="contact-list">
+
+<li>
+<span class="label">Service Area</span>
+<span class="value">
+Kalyan, Dombivali, Thane, Bhiwandi, Badlapur, Ambernath,
+Ulhasnagar &amp; Navi Mumbai
+</span>
+</li>
+
+<li>
+<span class="label">Call</span>
+<a class="value" href="tel:+917208102029">7208102029</a>
+</li>
+
+<li>
+<span class="label">WhatsApp</span>
+<a class="value" href="https://wa.me/917208102029" target="_blank">
+Chat on WhatsApp
+</a>
+</li>
+
+<li>
+<span class="label">Email</span>
+<a class="value" href="mailto:blossominteriord@gmail.com">
+blossominteriord@gmail.com
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="form">
+
+<h3>Get a Quick Quote</h3>
+
+<form id="leadForm">
+
+<div class="field">
+<label for="name">FULL NAME</label>
+<input id="name" type="text" required placeholder="Your name">
+</div>
+
+<div class="field">
+<label for="phone">PHONE NUMBER</label>
+<input id="phone" type="tel" required placeholder="Your contact number">
+</div>
+
+<div class="field">
+<label for="location">PROJECT LOCATION</label>
+<input id="location" type="text" required placeholder="Kalyan / Dombivali / Thane etc.">
+</div>
+
+<div class="field">
+<label for="requirement">YOUR REQUIREMENT</label>
+<textarea id="requirement" placeholder="Painting, interior, false ceiling, kitchen, renovation etc."></textarea>
+</div>
+
+<button class="btn btn-gold" type="submit">
+Send Enquiry on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer">
+
+<div class="footer-brand">
+Blossom Interior &amp; Decorator
+<small>COMPLETE HOME &amp; COMMERCIAL SOLUTIONS</small>
+</div>
+
+<div class="footer-links">
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+<a href="tel:+917208102029">7208102029</a>
+</div>
+
+</div>
+
+<div class="footer-note">
+Serving Kalyan, Dombivali, Thane, Bhiwandi, Badlapur, Ambernath,
+Ulhasnagar &amp; Navi Mumbai — Complete Interior &amp; Painting Solutions
+</div>
+
+</div>
+
+</footer>
+
+
+<div class="float">
+
+<a href="tel:+917208102029" title="Call">☎</a>
+
+<a href="https://wa.me/917208102029" target="_blank" title="WhatsApp">W</a>
+
+</div>
+
+
+<script>
+
+document.getElementById("leadForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name=document.getElementById("name").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const location=document.getElementById("location").value.trim();
+const requirement=document.getElementById("requirement").value.trim();
+
+const message=
+"Hello Blossom Interior & Decorator,%0A%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Mobile: "+encodeURIComponent(phone)+"%0A"+
+"Project Location: "+encodeURIComponent(location)+"%0A"+
+"Requirement: "+encodeURIComponent(requirement || "Please contact me regarding my project.");
+
+window.open(
+"https://wa.me/917208102029?text="+message,
+"_blank"
+);
+
+});
+
+</script>
 
 </body>
 </html>
